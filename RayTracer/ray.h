@@ -87,8 +87,8 @@ public:
             return dir * eta - normal * (eta * ndang + sqrtf(k));
     }
     /// Generate random ray from collision point
-	/// @param collision
-	/// @param collision
+	/// @param surfPoint
+	/// @param inacuracy
 	Ray random(const SurfacePoint& surfPoint, float inacuracy) {
         Ray ray;        
         Vector rnd = Vector::random(inacuracy);

@@ -1,0 +1,71 @@
+\hypertarget{class_film}{}\section{Film Class Reference}
+\label{class_film}\index{Film@{Film}}
+
+
+\mbox{\hyperlink{class_film}{Film}} class is represent target piicture.  
+
+
+
+
+{\ttfamily \#include $<$film.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_film_afc02973dd79cd6d5bd915285b5e068a1}{Film}} (int width, int height, double antialias)
+\item 
+void \mbox{\hyperlink{class_film_a4581cd3e307d06dd6e425f776a3af796}{write\+Image}} (const char $\ast$file\+Name)
+\item 
+\mbox{\Hypertarget{class_film_a552b6312ff4adba3f2c5bc70586d3e38}\label{class_film_a552b6312ff4adba3f2c5bc70586d3e38}} 
+void \mbox{\hyperlink{class_film_a552b6312ff4adba3f2c5bc70586d3e38}{commit}} (int x, int y, const \mbox{\hyperlink{class_color}{Color}} \&c)
+\begin{DoxyCompactList}\small\item\em Set color of given pixel. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\mbox{\hyperlink{class_film}{Film}} class is represent target piicture. 
+
+\+:
+
+Write the color to (sample.\+x, sample.\+y) on the image void commit(\+Sample\& sample, Color\& color)
+
+Output image to a file void \mbox{\hyperlink{class_film_a4581cd3e307d06dd6e425f776a3af796}{write\+Image()}};
+
+\+:
+
+Can be implemented just by a 2D array of \mbox{\hyperlink{class_color}{Color}} (Later on, we can implement more complicated things such as multi-\/sample per pixel, or post processing, eg. tone mapping in this class) 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_film_afc02973dd79cd6d5bd915285b5e068a1}\label{class_film_afc02973dd79cd6d5bd915285b5e068a1}} 
+\index{Film@{Film}!Film@{Film}}
+\index{Film@{Film}!Film@{Film}}
+\subsubsection{\texorpdfstring{Film()}{Film()}}
+{\footnotesize\ttfamily Film\+::\+Film (\begin{DoxyParamCaption}\item[{int}]{width,  }\item[{int}]{height,  }\item[{double}]{antialias }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Construct the image with given size and antialysing mode 
+\begin{DoxyParams}{Parameters}
+{\em width} & The width of film picture \\
+\hline
+{\em height} & The height of film picture \\
+\hline
+{\em antialias} & value (aka how many raytraces per single pixel) \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_film_a4581cd3e307d06dd6e425f776a3af796}\label{class_film_a4581cd3e307d06dd6e425f776a3af796}} 
+\index{Film@{Film}!write\+Image@{write\+Image}}
+\index{write\+Image@{write\+Image}!Film@{Film}}
+\subsubsection{\texorpdfstring{write\+Image()}{writeImage()}}
+{\footnotesize\ttfamily void Film\+::write\+Image (\begin{DoxyParamCaption}\item[{const char $\ast$}]{file\+Name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Write image to the file 
+\begin{DoxyParams}{Parameters}
+{\em file\+Name} & the path to the target file \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{film_8h}{film.\+h}}\end{DoxyCompactItemize}

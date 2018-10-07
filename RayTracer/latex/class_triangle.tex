@@ -1,0 +1,160 @@
+\hypertarget{class_triangle}{}\section{Triangle Class Reference}
+\label{class_triangle}\index{Triangle@{Triangle}}
+
+
+Cointans three world position and thre bormals normal. Additionaly contans normal for triangle.  
+
+
+
+
+{\ttfamily \#include $<$triangle.\+h$>$}
+
+Inheritance diagram for Triangle\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_triangle}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_triangle_a903d25822fb5103ea3dcb03efa0cea2a}{Triangle}} (\mbox{\hyperlink{struct_vector}{Vector}} v1, \mbox{\hyperlink{struct_vector}{Vector}} v2, \mbox{\hyperlink{struct_vector}{Vector}} v3)
+\item 
+\mbox{\hyperlink{class_triangle_a54140a599b11aa207d2dd46369ff94b4}{Triangle}} (\mbox{\hyperlink{struct_vector}{Vector}} v1, \mbox{\hyperlink{struct_vector}{Vector}} v2, \mbox{\hyperlink{struct_vector}{Vector}} v3, \mbox{\hyperlink{struct_vector}{Vector}} n1, \mbox{\hyperlink{struct_vector}{Vector}} n2, \mbox{\hyperlink{struct_vector}{Vector}} n3)
+\item 
+bool \mbox{\hyperlink{class_triangle_ad78a148da18386f99f23731ce7de431f}{intersect}} (\mbox{\hyperlink{class_ray}{Ray}} \&ray, \mbox{\hyperlink{class_intersection}{Intersection}} \&intersection, bool cull\+Back)
+\item 
+bool \mbox{\hyperlink{class_triangle_abf8edc617d32e7c651a01efc0cb4647e}{intersect}} (\mbox{\hyperlink{class_ray}{Ray}} \&ray, bool cull\+Back)
+\item 
+virtual bool \mbox{\hyperlink{class_triangle_a8fef25a36bfe124a5e632e4f9fe2726f}{pretransform}} (\mbox{\hyperlink{class_transform}{Transform}} \&obj2world)
+\item 
+virtual bool \mbox{\hyperlink{class_triangle_a3c33c1eb1d04b85a40426d3a14819d74}{is\+Front}} (const \mbox{\hyperlink{struct_vector}{Vector}} \&dir)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Cointans three world position and thre bormals normal. Additionaly contans normal for triangle. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_triangle_a903d25822fb5103ea3dcb03efa0cea2a}\label{class_triangle_a903d25822fb5103ea3dcb03efa0cea2a}} 
+\index{Triangle@{Triangle}!Triangle@{Triangle}}
+\index{Triangle@{Triangle}!Triangle@{Triangle}}
+\subsubsection{\texorpdfstring{Triangle()}{Triangle()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Triangle\+::\+Triangle (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_vector}{Vector}}}]{v1,  }\item[{\mbox{\hyperlink{struct_vector}{Vector}}}]{v2,  }\item[{\mbox{\hyperlink{struct_vector}{Vector}}}]{v3 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Construct planar triangle 
+\begin{DoxyParams}{Parameters}
+{\em v1} & point one \\
+\hline
+{\em v2} & point two \\
+\hline
+{\em v3} & point three \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_triangle_a54140a599b11aa207d2dd46369ff94b4}\label{class_triangle_a54140a599b11aa207d2dd46369ff94b4}} 
+\index{Triangle@{Triangle}!Triangle@{Triangle}}
+\index{Triangle@{Triangle}!Triangle@{Triangle}}
+\subsubsection{\texorpdfstring{Triangle()}{Triangle()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Triangle\+::\+Triangle (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_vector}{Vector}}}]{v1,  }\item[{\mbox{\hyperlink{struct_vector}{Vector}}}]{v2,  }\item[{\mbox{\hyperlink{struct_vector}{Vector}}}]{v3,  }\item[{\mbox{\hyperlink{struct_vector}{Vector}}}]{n1,  }\item[{\mbox{\hyperlink{struct_vector}{Vector}}}]{n2,  }\item[{\mbox{\hyperlink{struct_vector}{Vector}}}]{n3 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Construct non planar triangle 
+\begin{DoxyParams}{Parameters}
+{\em v1} & point one \\
+\hline
+{\em v2} & point two \\
+\hline
+{\em v3} & point three \\
+\hline
+{\em n1} & normal one \\
+\hline
+{\em n2} & normal two \\
+\hline
+{\em n3} & normal three \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_triangle_ad78a148da18386f99f23731ce7de431f}\label{class_triangle_ad78a148da18386f99f23731ce7de431f}} 
+\index{Triangle@{Triangle}!intersect@{intersect}}
+\index{intersect@{intersect}!Triangle@{Triangle}}
+\subsubsection{\texorpdfstring{intersect()}{intersect()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool Triangle\+::intersect (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_ray}{Ray}} \&}]{ray,  }\item[{\mbox{\hyperlink{class_intersection}{Intersection}} \&}]{intersection,  }\item[{bool}]{cull\+Back }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Test intersection between this triangle and ray. 
+\begin{DoxyParams}[1]{Parameters}
+ & {\em ray} & \\
+\hline
+\mbox{\tt out}  & {\em intersection} & \mbox{\hyperlink{class_intersection}{Intersection}} \\
+\hline
+ & {\em cull\+Back} & In case if it is true then ignore back side of triangle \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true for sucessful intersection 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_shape_a06081ad5df190daf858f295bd8e8a0e1}{Shape}}.
+
+\mbox{\Hypertarget{class_triangle_abf8edc617d32e7c651a01efc0cb4647e}\label{class_triangle_abf8edc617d32e7c651a01efc0cb4647e}} 
+\index{Triangle@{Triangle}!intersect@{intersect}}
+\index{intersect@{intersect}!Triangle@{Triangle}}
+\subsubsection{\texorpdfstring{intersect()}{intersect()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bool Triangle\+::intersect (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_ray}{Ray}} \&}]{ray,  }\item[{bool}]{cull\+Back }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Test intersection between this triangle and ray. 
+\begin{DoxyParams}{Parameters}
+{\em ray} & the ray to intersect \\
+\hline
+{\em cull\+Back} & In case if it is true then ignore back side of triangle \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true for sucessful intersection 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_shape_a41cb78dcc1b919cdba2b7fbc0a1a0bc8}{Shape}}.
+
+\mbox{\Hypertarget{class_triangle_a3c33c1eb1d04b85a40426d3a14819d74}\label{class_triangle_a3c33c1eb1d04b85a40426d3a14819d74}} 
+\index{Triangle@{Triangle}!is\+Front@{is\+Front}}
+\index{is\+Front@{is\+Front}!Triangle@{Triangle}}
+\subsubsection{\texorpdfstring{is\+Front()}{isFront()}}
+{\footnotesize\ttfamily virtual bool Triangle\+::is\+Front (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_vector}{Vector}} \&}]{dir }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Test if light ray\textquotesingle{}s direction hit fron face of this triangle 
+\begin{DoxyParams}{Parameters}
+{\em dir} & the light\textquotesingle{}s direction \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true for front face of this triangle 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_shape_ac988eb692cfbfcaa1907491938a55b7a}{Shape}}.
+
+\mbox{\Hypertarget{class_triangle_a8fef25a36bfe124a5e632e4f9fe2726f}\label{class_triangle_a8fef25a36bfe124a5e632e4f9fe2726f}} 
+\index{Triangle@{Triangle}!pretransform@{pretransform}}
+\index{pretransform@{pretransform}!Triangle@{Triangle}}
+\subsubsection{\texorpdfstring{pretransform()}{pretransform()}}
+{\footnotesize\ttfamily virtual bool Triangle\+::pretransform (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_transform}{Transform}} \&}]{obj2world }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Pre transform the trinagle 
+\begin{DoxyParams}{Parameters}
+{\em obj2word} & transform matrix \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+always true 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_shape_ad4f344dbda0fb8446805631c0c408a16}{Shape}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{triangle_8h}{triangle.\+h}}\end{DoxyCompactItemize}

@@ -1,0 +1,114 @@
+\hypertarget{class_camera}{}\section{Camera Class Reference}
+\label{class_camera}\index{Camera@{Camera}}
+
+
+{\ttfamily \#include $<$camera.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_camera_aafce2ffd325ea7d8eb45076ba139ae17}{Camera}} (float fovy, float aspect, float near, float far)
+\item 
+void \mbox{\hyperlink{class_camera_afa27020f8305c918d9015bdebdb7437c}{look\+At}} (const \mbox{\hyperlink{struct_vector}{Vector}} \&campos, const \mbox{\hyperlink{struct_vector}{Vector}} \&lookat, const \mbox{\hyperlink{struct_vector}{Vector}} \&desiredup)
+\item 
+\mbox{\hyperlink{class_ray}{Ray}} \mbox{\hyperlink{class_camera_a154c1d086e33486104f1241692a5781c}{Generate\+Ray}} (\mbox{\hyperlink{struct_vector}{Vector}} \&sample)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_camera_a181aff3db1ae87a837ddc3a97e5b0f43}\label{class_camera_a181aff3db1ae87a837ddc3a97e5b0f43}} 
+float {\bfseries aspect}
+\item 
+\mbox{\Hypertarget{class_camera_aff7393c9cfbccd7e369091f00008da93}\label{class_camera_aff7393c9cfbccd7e369091f00008da93}} 
+float {\bfseries fov}
+\item 
+\mbox{\Hypertarget{class_camera_ad96efd3e1e4ec33dddb1d25f05d02ff2}\label{class_camera_ad96efd3e1e4ec33dddb1d25f05d02ff2}} 
+float {\bfseries near}
+\item 
+\mbox{\Hypertarget{class_camera_a9f30b77edf6485e001a98d21ff5f17fe}\label{class_camera_a9f30b77edf6485e001a98d21ff5f17fe}} 
+float {\bfseries far}
+\item 
+\mbox{\Hypertarget{class_camera_a7f6914ba4267e8829c8199f1a61e24d7}\label{class_camera_a7f6914ba4267e8829c8199f1a61e24d7}} 
+float {\bfseries tanfov}
+\item 
+\mbox{\Hypertarget{class_camera_a4d4c7ba071d86c1e890be73923dac2d1}\label{class_camera_a4d4c7ba071d86c1e890be73923dac2d1}} 
+\mbox{\hyperlink{struct_vector}{Vector}} {\bfseries pos}
+\item 
+\mbox{\Hypertarget{class_camera_af628dbd4dc8e60240db45825ecea0d81}\label{class_camera_af628dbd4dc8e60240db45825ecea0d81}} 
+\mbox{\hyperlink{struct_vector}{Vector}} {\bfseries dir}
+\item 
+\mbox{\Hypertarget{class_camera_ae6748e11785b98e30118c5ed16dc461b}\label{class_camera_ae6748e11785b98e30118c5ed16dc461b}} 
+mat4 {\bfseries world\+To\+UV}
+\item 
+\mbox{\Hypertarget{class_camera_a1921c5ccd90c4e1b27db25947c2b083e}\label{class_camera_a1921c5ccd90c4e1b27db25947c2b083e}} 
+mat4 {\bfseries uv\+To\+World}
+\item 
+\mbox{\Hypertarget{class_camera_a30128269cb562b51010db9ffb39edbc4}\label{class_camera_a30128269cb562b51010db9ffb39edbc4}} 
+\mbox{\hyperlink{class_transform}{Transform}} {\bfseries projection}
+\item 
+\mbox{\Hypertarget{class_camera_ad7f51fc63f1e028a87fea720943b481c}\label{class_camera_ad7f51fc63f1e028a87fea720943b481c}} 
+\mbox{\hyperlink{class_transform}{Transform}} {\bfseries world\+To\+Camera}
+\item 
+\mbox{\Hypertarget{class_camera_a1a9bab596e1d324368630d7606d186f5}\label{class_camera_a1a9bab596e1d324368630d7606d186f5}} 
+\mbox{\hyperlink{class_transform}{Transform}} {\bfseries camera\+To\+World}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Simple camera for ray tracer 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_camera_aafce2ffd325ea7d8eb45076ba139ae17}\label{class_camera_aafce2ffd325ea7d8eb45076ba139ae17}} 
+\index{Camera@{Camera}!Camera@{Camera}}
+\index{Camera@{Camera}!Camera@{Camera}}
+\subsubsection{\texorpdfstring{Camera()}{Camera()}}
+{\footnotesize\ttfamily Camera\+::\+Camera (\begin{DoxyParamCaption}\item[{float}]{fovy,  }\item[{float}]{aspect,  }\item[{float}]{near,  }\item[{float}]{far }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Construct new camera 
+\begin{DoxyParams}{Parameters}
+{\em fovy} & vertical field of view \\
+\hline
+{\em aspect} & aspect ratio \\
+\hline
+{\em near} & distance to near plane \\
+\hline
+{\em far} & distance to far plane \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_camera_a154c1d086e33486104f1241692a5781c}\label{class_camera_a154c1d086e33486104f1241692a5781c}} 
+\index{Camera@{Camera}!Generate\+Ray@{Generate\+Ray}}
+\index{Generate\+Ray@{Generate\+Ray}!Camera@{Camera}}
+\subsubsection{\texorpdfstring{Generate\+Ray()}{GenerateRay()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_ray}{Ray}} Camera\+::\+Generate\+Ray (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_vector}{Vector}} \&}]{sample }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Generate camera ray 
+\begin{DoxyParams}{Parameters}
+{\em sample} & coordinate of sample \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+new ray for this sample point 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_camera_afa27020f8305c918d9015bdebdb7437c}\label{class_camera_afa27020f8305c918d9015bdebdb7437c}} 
+\index{Camera@{Camera}!look\+At@{look\+At}}
+\index{look\+At@{look\+At}!Camera@{Camera}}
+\subsubsection{\texorpdfstring{look\+At()}{lookAt()}}
+{\footnotesize\ttfamily void Camera\+::look\+At (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_vector}{Vector}} \&}]{campos,  }\item[{const \mbox{\hyperlink{struct_vector}{Vector}} \&}]{lookat,  }\item[{const \mbox{\hyperlink{struct_vector}{Vector}} \&}]{desiredup }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Set camera transform to position and \textquotesingle{}look at\textquotesingle{} orientation 
+\begin{DoxyParams}{Parameters}
+{\em campos} & camera position \\
+\hline
+{\em lookat} & look at point \\
+\hline
+{\em desiredup} & vector up \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{camera_8h}{camera.\+h}}\end{DoxyCompactItemize}

@@ -1,0 +1,79 @@
+\hypertarget{class_picture}{}\section{Picture Class Reference}
+\label{class_picture}\index{Picture@{Picture}}
+
+
+Film class is represent target piicture.  
+
+
+
+
+{\ttfamily \#include $<$picture.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_picture_aa2edc676eb9b96172d226e0629687ee6}{Picture}} (int w, int h)
+\item 
+\mbox{\Hypertarget{class_picture_a277f070f83063fa0922d2c1de8889a58}\label{class_picture_a277f070f83063fa0922d2c1de8889a58}} 
+\mbox{\hyperlink{class_picture_a277f070f83063fa0922d2c1de8889a58}{$\sim$\+Picture}} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_picture_ad79245b9b70902f0031e14f344e5a644}{write\+Image}} (const char $\ast$file\+Name, float antialias)
+\item 
+\mbox{\Hypertarget{class_picture_a5cd236f2100c7425b70af120710ad845}\label{class_picture_a5cd236f2100c7425b70af120710ad845}} 
+void \mbox{\hyperlink{class_picture_a5cd236f2100c7425b70af120710ad845}{commit}} (int x, int y, const \mbox{\hyperlink{class_color}{Color}} \&c)
+\begin{DoxyCompactList}\small\item\em Set color of given pixel. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_picture_a6bb2ae998df39993d4b56ae106aaa3cb}\label{class_picture_a6bb2ae998df39993d4b56ae106aaa3cb}} 
+\mbox{\hyperlink{class_color}{Color}} $\ast$ \mbox{\hyperlink{class_picture_a6bb2ae998df39993d4b56ae106aaa3cb}{get\+Pixef}} (int x, int y)
+\begin{DoxyCompactList}\small\item\em Get pixel in coordinates. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Film class is represent target piicture. 
+
+\+:
+
+Write the color to (sample.\+x, sample.\+y) on the image void commit(\+Sample\& sample, Color\& color)
+
+Output image to a file void \mbox{\hyperlink{class_picture_ad79245b9b70902f0031e14f344e5a644}{write\+Image()}};
+
+\+:
+
+Can be implemented just by a 2D array of \mbox{\hyperlink{class_color}{Color}} (Later on, we can implement more complicated things such as multi-\/sample per pixel, or post processing, eg. tone mapping in this class) 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_picture_aa2edc676eb9b96172d226e0629687ee6}\label{class_picture_aa2edc676eb9b96172d226e0629687ee6}} 
+\index{Picture@{Picture}!Picture@{Picture}}
+\index{Picture@{Picture}!Picture@{Picture}}
+\subsubsection{\texorpdfstring{Picture()}{Picture()}}
+{\footnotesize\ttfamily Picture\+::\+Picture (\begin{DoxyParamCaption}\item[{int}]{w,  }\item[{int}]{h }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Construct the image with given size and antialysing mode 
+\begin{DoxyParams}{Parameters}
+{\em w} & The width of picture \\
+\hline
+{\em h} & The height of picture \\
+\hline
+{\em antialias} & value (aka how many raytraces per single pixel) \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_picture_ad79245b9b70902f0031e14f344e5a644}\label{class_picture_ad79245b9b70902f0031e14f344e5a644}} 
+\index{Picture@{Picture}!write\+Image@{write\+Image}}
+\index{write\+Image@{write\+Image}!Picture@{Picture}}
+\subsubsection{\texorpdfstring{write\+Image()}{writeImage()}}
+{\footnotesize\ttfamily void Picture\+::write\+Image (\begin{DoxyParamCaption}\item[{const char $\ast$}]{file\+Name,  }\item[{float}]{antialias }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Write image to the file 
+\begin{DoxyParams}{Parameters}
+{\em file\+Name} & the path to the target file \\
+\hline
+{\em antialias} & quantity of rays per single pixel \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{picture_8h}{picture.\+h}}\end{DoxyCompactItemize}

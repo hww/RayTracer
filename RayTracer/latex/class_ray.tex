@@ -1,0 +1,137 @@
+\hypertarget{class_ray}{}\section{Ray Class Reference}
+\label{class_ray}\index{Ray@{Ray}}
+
+
+{\ttfamily \#include $<$ray.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_ray_a2e3d2c29f2df4ab3da10da79d4acb852}\label{class_ray_a2e3d2c29f2df4ab3da10da79d4acb852}} 
+\mbox{\hyperlink{class_ray_a2e3d2c29f2df4ab3da10da79d4acb852}{Ray}} ()
+\begin{DoxyCompactList}\small\item\em Create new ray. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_ray_a297d6394114e02235276e3805e0b4e2d}\label{class_ray_a297d6394114e02235276e3805e0b4e2d}} 
+\mbox{\hyperlink{class_ray_a297d6394114e02235276e3805e0b4e2d}{Ray}} (const \mbox{\hyperlink{struct_vector}{Vector}} \&\mbox{\hyperlink{class_ray_a7efe0dcd9166fc825c09359460c8f99a}{pos}}, const \mbox{\hyperlink{struct_vector}{Vector}} \&\mbox{\hyperlink{class_ray_acfb8b7801f774b160fa51404dd65f2a5}{dir}})
+\begin{DoxyCompactList}\small\item\em Create new ray in possition with direction. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_ray_a33ec01131777eb8f403fdf96a90c6baf}\label{class_ray_a33ec01131777eb8f403fdf96a90c6baf}} 
+std\+::string \mbox{\hyperlink{class_ray_a33ec01131777eb8f403fdf96a90c6baf}{to\+String}} ()
+\begin{DoxyCompactList}\small\item\em Convert ray to the string. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_ray_a85585483de6a2fee24c6ca4aadf8980c}\label{class_ray_a85585483de6a2fee24c6ca4aadf8980c}} 
+\mbox{\hyperlink{struct_vector}{Vector}} \mbox{\hyperlink{class_ray_a85585483de6a2fee24c6ca4aadf8980c}{get\+Point}} (float dist)
+\begin{DoxyCompactList}\small\item\em Get ray\textquotesingle{}s end point. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_ray}{Ray}} \mbox{\hyperlink{class_ray_ad3c0dfd18653aeb61735b3f720498dc8}{reflect}} (const \mbox{\hyperlink{class_surface_point}{Surface\+Point}} \&surf\+Point)
+\item 
+\mbox{\hyperlink{class_ray}{Ray}} \mbox{\hyperlink{class_ray_ab4723a206318cb11e98b487c324912df}{refract}} (const \mbox{\hyperlink{class_surface_point}{Surface\+Point}} \&surf\+Point, float eta)
+\item 
+\mbox{\hyperlink{struct_vector}{Vector}} \mbox{\hyperlink{class_ray_a411c500da66cd92a3a24807aba2015ae}{reflect}} (const \mbox{\hyperlink{struct_vector}{Vector}} \&\mbox{\hyperlink{class_ray_acfb8b7801f774b160fa51404dd65f2a5}{dir}}, const \mbox{\hyperlink{struct_vector}{Vector}} \&normal)
+\item 
+\mbox{\hyperlink{struct_vector}{Vector}} \mbox{\hyperlink{class_ray_a0f59bf2236d721bc337892989e9a6e4e}{refract}} (const \mbox{\hyperlink{struct_vector}{Vector}} \&\mbox{\hyperlink{class_ray_acfb8b7801f774b160fa51404dd65f2a5}{dir}}, const \mbox{\hyperlink{struct_vector}{Vector}} \&normal, float eta)
+\item 
+\mbox{\hyperlink{class_ray}{Ray}} \mbox{\hyperlink{class_ray_a6198c0a3ef332817bec5e8421a04cb31}{random}} (const \mbox{\hyperlink{class_surface_point}{Surface\+Point}} \&surf\+Point, float inacuracy)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_ray_a7efe0dcd9166fc825c09359460c8f99a}\label{class_ray_a7efe0dcd9166fc825c09359460c8f99a}} 
+\mbox{\hyperlink{struct_vector}{Vector}} \mbox{\hyperlink{class_ray_a7efe0dcd9166fc825c09359460c8f99a}{pos}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_ray}{Ray}} position. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_ray_acfb8b7801f774b160fa51404dd65f2a5}\label{class_ray_acfb8b7801f774b160fa51404dd65f2a5}} 
+\mbox{\hyperlink{struct_vector}{Vector}} \mbox{\hyperlink{class_ray_acfb8b7801f774b160fa51404dd65f2a5}{dir}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_ray}{Ray}} direction. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_ray_a6a0a2346b82854fa203552c200bc654f}\label{class_ray_a6a0a2346b82854fa203552c200bc654f}} 
+float \mbox{\hyperlink{class_ray_a6a0a2346b82854fa203552c200bc654f}{tmin}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_ray}{Ray}} minimum distance. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_ray_a603b9ffee3760225c80b13eaf30c5441}\label{class_ray_a603b9ffee3760225c80b13eaf30c5441}} 
+float \mbox{\hyperlink{class_ray_a603b9ffee3760225c80b13eaf30c5441}{tmax}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_ray}{Ray}} maximum distance. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_ray_ae75991746cc64ed2e7613e0e99988ec1}\label{class_ray_ae75991746cc64ed2e7613e0e99988ec1}} 
+\mbox{\hyperlink{struct_vector}{Vector}} \mbox{\hyperlink{class_ray_ae75991746cc64ed2e7613e0e99988ec1}{target}}
+\begin{DoxyCompactList}\small\item\em debugging purposes \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Members\+: Point pos \mbox{\hyperlink{struct_vector}{Vector}} dir float t\+\_\+min, t\+\_\+max
+
+Notes\+: It represent the ray ray(t) = pos + t$\ast$dir, where t\+\_\+min $<$= t $<$= t\+\_\+max 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_ray_a6198c0a3ef332817bec5e8421a04cb31}\label{class_ray_a6198c0a3ef332817bec5e8421a04cb31}} 
+\index{Ray@{Ray}!random@{random}}
+\index{random@{random}!Ray@{Ray}}
+\subsubsection{\texorpdfstring{random()}{random()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_ray}{Ray}} Ray\+::random (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_surface_point}{Surface\+Point}} \&}]{surf\+Point,  }\item[{float}]{inacuracy }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Generate random ray from collision point 
+\begin{DoxyParams}{Parameters}
+{\em collision} & \\
+\hline
+{\em collision} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_ray_ad3c0dfd18653aeb61735b3f720498dc8}\label{class_ray_ad3c0dfd18653aeb61735b3f720498dc8}} 
+\index{Ray@{Ray}!reflect@{reflect}}
+\index{reflect@{reflect}!Ray@{Ray}}
+\subsubsection{\texorpdfstring{reflect()}{reflect()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_ray}{Ray}} Ray\+::reflect (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_surface_point}{Surface\+Point}} \&}]{surf\+Point }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Reflect vector from surface with normal 
+\begin{DoxyParams}{Parameters}
+{\em collision} & vector\textquotesingle{}s collision point \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+vector after reflection 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_ray_a411c500da66cd92a3a24807aba2015ae}\label{class_ray_a411c500da66cd92a3a24807aba2015ae}} 
+\index{Ray@{Ray}!reflect@{reflect}}
+\index{reflect@{reflect}!Ray@{Ray}}
+\subsubsection{\texorpdfstring{reflect()}{reflect()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_vector}{Vector}} Ray\+::reflect (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_vector}{Vector}} \&}]{dir,  }\item[{const \mbox{\hyperlink{struct_vector}{Vector}} \&}]{normal }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Reflect vector from surface with normal 
+\begin{DoxyParams}{Parameters}
+{\em dir} & vector direction \\
+\hline
+{\em normal} & surface normal \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+vector after reflection 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_ray_ab4723a206318cb11e98b487c324912df}\label{class_ray_ab4723a206318cb11e98b487c324912df}} 
+\index{Ray@{Ray}!refract@{refract}}
+\index{refract@{refract}!Ray@{Ray}}
+\subsubsection{\texorpdfstring{refract()}{refract()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_ray}{Ray}} Ray\+::refract (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_surface_point}{Surface\+Point}} \&}]{surf\+Point,  }\item[{float}]{eta }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Refract vector by surface with normal 
+\begin{DoxyParams}{Parameters}
+{\em collision} & collision point \\
+\hline
+{\em eta} & refraction value \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+vector after refraction 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_ray_a0f59bf2236d721bc337892989e9a6e4e}\label{class_ray_a0f59bf2236d721bc337892989e9a6e4e}} 
+\index{Ray@{Ray}!refract@{refract}}
+\index{refract@{refract}!Ray@{Ray}}
+\subsubsection{\texorpdfstring{refract()}{refract()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_vector}{Vector}} Ray\+::refract (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_vector}{Vector}} \&}]{dir,  }\item[{const \mbox{\hyperlink{struct_vector}{Vector}} \&}]{normal,  }\item[{float}]{eta }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Refract vector by surface with normal 
+\begin{DoxyParams}{Parameters}
+{\em dir} & vector direction \\
+\hline
+{\em eta} & refraction value \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+vector after refraction 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{ray_8h}{ray.\+h}}\end{DoxyCompactItemize}

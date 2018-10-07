@@ -1,0 +1,182 @@
+\hypertarget{class_transform}{}\section{Transform Class Reference}
+\label{class_transform}\index{Transform@{Transform}}
+
+
+{\ttfamily \#include $<$transform.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_transform_aa08ca4266efabc768973cdeea51945ab}\label{class_transform_aa08ca4266efabc768973cdeea51945ab}} 
+\mbox{\hyperlink{class_transform_aa08ca4266efabc768973cdeea51945ab}{Transform}} ()
+\begin{DoxyCompactList}\small\item\em Construct default transform matrix. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_transform_a9e66877ba4b108deb475d91b3e484b19}{Transform}} (mat4 m)
+\item 
+void \mbox{\hyperlink{class_transform_a527516549fad2a69271d82935e42e409}{set\+Transformation}} (mat4 m\+\_\+)
+\item 
+\mbox{\hyperlink{struct_vector}{Vector}} \mbox{\hyperlink{class_transform_a0326d611d8d74b4a43f0b6aaf1b87d67}{transform}} (\mbox{\hyperlink{struct_vector}{Vector}} v)
+\item 
+void \mbox{\hyperlink{class_transform_a9e08226abcc24477177fe1eeafaa43df}{transform}} (\mbox{\hyperlink{class_ray}{Ray}} \&ray)
+\item 
+void \mbox{\hyperlink{class_transform_afd54e58d092b30f7613f86c68a43ea9a}{transform}} (\mbox{\hyperlink{class_surface_point}{Surface\+Point}} \&surf\+Point)
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static mat4 \mbox{\hyperlink{class_transform_a846e6b2bec58a1110d4e5296b1caa1f4}{look\+At}} (const vec3 \&cam\+Position, const vec3 \&targ\+Position, const vec3 \&up)
+\item 
+static mat4 \mbox{\hyperlink{class_transform_a2045e6a0d6071568fa8a2d3819a52dc7}{perspective}} (float fovy, float aspect, float near, float far)
+\item 
+static mat3 \mbox{\hyperlink{class_transform_a41cee512b56644e2bf87d82a26adbe01}{rotate}} (const vec3 \&axis, const float angle)
+\item 
+static mat4 \mbox{\hyperlink{class_transform_a8c96f4dcc6aee87b1a2b66b9fbdbfc7c}{scale}} (const float \&sx, const float \&sy, const float \&sz)
+\item 
+static mat4 \mbox{\hyperlink{class_transform_aee43231752c8d0f5133b0374007252a2}{translate}} (const float \&tx, const float \&ty, const float \&tz)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_transform_ac7c371bdd14ff1c6434cac58082eff10}\label{class_transform_ac7c371bdd14ff1c6434cac58082eff10}} 
+mat4 {\bfseries m}
+\item 
+\mbox{\Hypertarget{class_transform_a57f1d2c66d7715757bbd79c61774dd87}\label{class_transform_a57f1d2c66d7715757bbd79c61774dd87}} 
+mat4 {\bfseries minvt}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Contains matrix \textquotesingle{}m\textquotesingle{} and its inverse vversion \textquotesingle{}minvt\textquotesingle{} (for transforming normals) 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_transform_a9e66877ba4b108deb475d91b3e484b19}\label{class_transform_a9e66877ba4b108deb475d91b3e484b19}} 
+\index{Transform@{Transform}!Transform@{Transform}}
+\index{Transform@{Transform}!Transform@{Transform}}
+\subsubsection{\texorpdfstring{Transform()}{Transform()}}
+{\footnotesize\ttfamily Transform\+::\+Transform (\begin{DoxyParamCaption}\item[{mat4}]{m }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Construct transform from given matrix 
+\begin{DoxyParams}{Parameters}
+{\em m} & the transformation matrix \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_transform_a846e6b2bec58a1110d4e5296b1caa1f4}\label{class_transform_a846e6b2bec58a1110d4e5296b1caa1f4}} 
+\index{Transform@{Transform}!look\+At@{look\+At}}
+\index{look\+At@{look\+At}!Transform@{Transform}}
+\subsubsection{\texorpdfstring{look\+At()}{lookAt()}}
+{\footnotesize\ttfamily mat4 Transform\+::look\+At (\begin{DoxyParamCaption}\item[{const vec3 \&}]{cam\+Position,  }\item[{const vec3 \&}]{targ\+Position,  }\item[{const vec3 \&}]{up }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Create look at matrix 
+\begin{DoxyParams}{Parameters}
+{\em cam\+Position} & camera position \\
+\hline
+{\em targ\+Position} & target point position \\
+\hline
+{\em up} & desired up vector \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_transform_a2045e6a0d6071568fa8a2d3819a52dc7}\label{class_transform_a2045e6a0d6071568fa8a2d3819a52dc7}} 
+\index{Transform@{Transform}!perspective@{perspective}}
+\index{perspective@{perspective}!Transform@{Transform}}
+\subsubsection{\texorpdfstring{perspective()}{perspective()}}
+{\footnotesize\ttfamily mat4 Transform\+::perspective (\begin{DoxyParamCaption}\item[{float}]{fovy,  }\item[{float}]{aspect,  }\item[{float}]{near,  }\item[{float}]{far }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Create perspective matrix 
+\begin{DoxyParams}{Parameters}
+{\em fovy} & vertical field of view \\
+\hline
+{\em aspect} & the aspect ratio \\
+\hline
+{\em near} & plane \\
+\hline
+{\em far} & plane \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_transform_a41cee512b56644e2bf87d82a26adbe01}\label{class_transform_a41cee512b56644e2bf87d82a26adbe01}} 
+\index{Transform@{Transform}!rotate@{rotate}}
+\index{rotate@{rotate}!Transform@{Transform}}
+\subsubsection{\texorpdfstring{rotate()}{rotate()}}
+{\footnotesize\ttfamily mat3 Transform\+::rotate (\begin{DoxyParamCaption}\item[{const vec3 \&}]{axis,  }\item[{const float}]{angle }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Create rotation matrix 
+\begin{DoxyParams}{Parameters}
+{\em angle} & the rotation angle \\
+\hline
+{\em axis} & trotate aroutd this axis \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_transform_a8c96f4dcc6aee87b1a2b66b9fbdbfc7c}\label{class_transform_a8c96f4dcc6aee87b1a2b66b9fbdbfc7c}} 
+\index{Transform@{Transform}!scale@{scale}}
+\index{scale@{scale}!Transform@{Transform}}
+\subsubsection{\texorpdfstring{scale()}{scale()}}
+{\footnotesize\ttfamily mat4 Transform\+::scale (\begin{DoxyParamCaption}\item[{const float \&}]{sx,  }\item[{const float \&}]{sy,  }\item[{const float \&}]{sz }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Create scale matrix 
+\begin{DoxyParams}{Parameters}
+{\em sx} & scale \\
+\hline
+{\em sy} & scale \\
+\hline
+{\em sz} & scale \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_transform_a527516549fad2a69271d82935e42e409}\label{class_transform_a527516549fad2a69271d82935e42e409}} 
+\index{Transform@{Transform}!set\+Transformation@{set\+Transformation}}
+\index{set\+Transformation@{set\+Transformation}!Transform@{Transform}}
+\subsubsection{\texorpdfstring{set\+Transformation()}{setTransformation()}}
+{\footnotesize\ttfamily void Transform\+::set\+Transformation (\begin{DoxyParamCaption}\item[{mat4}]{m\+\_\+ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Set transform to given matrix  m\+\_\+ new transformation matrix \mbox{\Hypertarget{class_transform_a0326d611d8d74b4a43f0b6aaf1b87d67}\label{class_transform_a0326d611d8d74b4a43f0b6aaf1b87d67}} 
+\index{Transform@{Transform}!transform@{transform}}
+\index{transform@{transform}!Transform@{Transform}}
+\subsubsection{\texorpdfstring{transform()}{transform()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_vector}{Vector}} Transform\+::transform (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_vector}{Vector}}}]{v }\end{DoxyParamCaption})}
+
+\mbox{\hyperlink{class_transform}{Transform}} vector  v input vector \begin{DoxyReturn}{Returns}
+is transformed vector 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_transform_a9e08226abcc24477177fe1eeafaa43df}\label{class_transform_a9e08226abcc24477177fe1eeafaa43df}} 
+\index{Transform@{Transform}!transform@{transform}}
+\index{transform@{transform}!Transform@{Transform}}
+\subsubsection{\texorpdfstring{transform()}{transform()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily void Transform\+::transform (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_ray}{Ray}} \&}]{ray }\end{DoxyParamCaption})}
+
+\mbox{\hyperlink{class_transform}{Transform}} ray 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in,out}  & {\em ray} & will be updated \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_transform_afd54e58d092b30f7613f86c68a43ea9a}\label{class_transform_afd54e58d092b30f7613f86c68a43ea9a}} 
+\index{Transform@{Transform}!transform@{transform}}
+\index{transform@{transform}!Transform@{Transform}}
+\subsubsection{\texorpdfstring{transform()}{transform()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily void Transform\+::transform (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_surface_point}{Surface\+Point}} \&}]{surf\+Point }\end{DoxyParamCaption})}
+
+\mbox{\hyperlink{class_transform}{Transform}} geometry 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in,out}  & {\em ray} & will be updated \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_transform_aee43231752c8d0f5133b0374007252a2}\label{class_transform_aee43231752c8d0f5133b0374007252a2}} 
+\index{Transform@{Transform}!translate@{translate}}
+\index{translate@{translate}!Transform@{Transform}}
+\subsubsection{\texorpdfstring{translate()}{translate()}}
+{\footnotesize\ttfamily mat4 Transform\+::translate (\begin{DoxyParamCaption}\item[{const float \&}]{tx,  }\item[{const float \&}]{ty,  }\item[{const float \&}]{tz }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Create translation matrix 
+\begin{DoxyParams}{Parameters}
+{\em tx} & translate position \\
+\hline
+{\em ty} & translate position \\
+\hline
+{\em tz} & translate position \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{transform_8h}{transform.\+h}}\item 
+\mbox{\hyperlink{transform_8cpp}{transform.\+cpp}}\end{DoxyCompactItemize}

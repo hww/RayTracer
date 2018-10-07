@@ -1,0 +1,72 @@
+\hypertarget{types_8h}{}\section{types.\+h File Reference}
+\label{types_8h}\index{types.\+h@{types.\+h}}
+
+
+Commonly used data types and macro definitions  Valery P. (github.\+com/hww)  
+
+
+{\ttfamily \#include $<$cmath$>$}\newline
+{\ttfamily \#include $<$float.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}glm/glm.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}glm/gtc/matrix\+\_\+transform.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}glm/gtx/random.\+hpp\char`\"{}}\newline
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{types_8h_a74abb94d2f9bf1da890236d0b92141a2}\label{types_8h_a74abb94d2f9bf1da890236d0b92141a2}} 
+\#define {\bfseries D\+E\+G2\+R\+AD}(degrees)~(degrees $\ast$ (PI/180))
+\item 
+\mbox{\Hypertarget{types_8h_a800a97230d72e5a216c2460f4f11db90}\label{types_8h_a800a97230d72e5a216c2460f4f11db90}} 
+\#define {\bfseries R\+A\+D2\+D\+EG}(radians)~(radians $\ast$ (180/PI))
+\item 
+\mbox{\Hypertarget{types_8h_a322f37caec9453b56b9b0acc453ebebe}\label{types_8h_a322f37caec9453b56b9b0acc453ebebe}} 
+\#define {\bfseries max}(left,  right)~(left $>$ right ? left \+: right)
+\item 
+\mbox{\Hypertarget{types_8h_a15055950a93fb9f7a83df0c2c98a7d12}\label{types_8h_a15055950a93fb9f7a83df0c2c98a7d12}} 
+\#define {\bfseries min}(left,  right)~(left $<$ right ? left \+: right)
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{types_8h_a3d0ce73e3199de81565fb01632415288}\label{types_8h_a3d0ce73e3199de81565fb01632415288}} 
+typedef glm\+::vec3 {\bfseries vec3}
+\item 
+\mbox{\Hypertarget{types_8h_ac54e849f8b2339f592307eaf6cdbba77}\label{types_8h_ac54e849f8b2339f592307eaf6cdbba77}} 
+typedef glm\+::vec4 {\bfseries vec4}
+\item 
+\mbox{\Hypertarget{types_8h_a456be013bdf687ab454bdf8bb211474e}\label{types_8h_a456be013bdf687ab454bdf8bb211474e}} 
+typedef glm\+::mat3 {\bfseries mat3}
+\item 
+\mbox{\Hypertarget{types_8h_a2db59f395fe82a7394c6324956c265d8}\label{types_8h_a2db59f395fe82a7394c6324956c265d8}} 
+typedef glm\+::mat4 {\bfseries mat4}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+float \mbox{\hyperlink{types_8h_aae54090eff2947cff1b8a99f4d72fad2}{random\+In\+Range}} (float a, float b)
+\begin{DoxyCompactList}\small\item\em Generate random value in given range. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{types_8h_aa08a577393243b86dfd2a97e61443673}\label{types_8h_aa08a577393243b86dfd2a97e61443673}} 
+const float {\bfseries PI} = 3.\+14159265f
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Commonly used data types and macro definitions  Valery P. (github.\+com/hww) 
+
+\mbox{\hyperlink{class_ray_tracer}{Ray\+Tracer}} for online courses 
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{types_8h_aae54090eff2947cff1b8a99f4d72fad2}\label{types_8h_aae54090eff2947cff1b8a99f4d72fad2}} 
+\index{types.\+h@{types.\+h}!random\+In\+Range@{random\+In\+Range}}
+\index{random\+In\+Range@{random\+In\+Range}!types.\+h@{types.\+h}}
+\subsubsection{\texorpdfstring{random\+In\+Range()}{randomInRange()}}
+{\footnotesize\ttfamily float random\+In\+Range (\begin{DoxyParamCaption}\item[{float}]{min,  }\item[{float}]{max }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Generate random value in given range. 
+
+Generate random value in given range. 

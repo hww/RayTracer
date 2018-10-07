@@ -1,0 +1,124 @@
+\hypertarget{class_primitive}{}\section{Primitive Class Reference}
+\label{class_primitive}\index{Primitive@{Primitive}}
+
+
+{\ttfamily \#include $<$primitive.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_primitive_aa469be6577bcf2c249a47c6e44608155}{Primitive}} (\mbox{\hyperlink{class_shape}{Shape}} $\ast$obj)
+\item 
+\mbox{\Hypertarget{class_primitive_a1e75da88b15d7b662cc00214770af06b}\label{class_primitive_a1e75da88b15d7b662cc00214770af06b}} 
+void {\bfseries set\+Transform} (\mbox{\hyperlink{class_transform}{Transform}} transform)
+\item 
+\mbox{\Hypertarget{class_primitive_a47dd397f6cc26ef6bf797446ab50e302}\label{class_primitive_a47dd397f6cc26ef6bf797446ab50e302}} 
+void {\bfseries set\+Transform} (\mbox{\hyperlink{class_transform}{Transform}} transform, bool pretransform)
+\item 
+bool \mbox{\hyperlink{class_primitive_adfe14a385e39f9e86ff31e659e3ed958}{intersect}} (const \mbox{\hyperlink{class_ray}{Ray}} ray, \mbox{\hyperlink{class_intersection}{Intersection}} \&intersection, bool cull\+Back)
+\item 
+bool \mbox{\hyperlink{class_primitive_ad92af2f561d08da5c74d539ce88b9ce4}{intersect}} (\mbox{\hyperlink{class_ray}{Ray}} ray, bool cull\+Back)
+\item 
+\mbox{\hyperlink{class_material}{Material}} $\ast$ \mbox{\hyperlink{class_primitive_acf807003abb52d3224dda7a476f71d96}{get\+Material}} (const \mbox{\hyperlink{class_surface_point}{Surface\+Point}} \&surf\+Point)
+\item 
+\mbox{\Hypertarget{class_primitive_a63fa989ab99215b487782d4085021a75}\label{class_primitive_a63fa989ab99215b487782d4085021a75}} 
+bool \mbox{\hyperlink{class_primitive_a63fa989ab99215b487782d4085021a75}{is\+Front}} (const \mbox{\hyperlink{struct_vector}{Vector}} \&dir)
+\begin{DoxyCompactList}\small\item\em Test if this ray hit front surface of primitive. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_primitive_a90ade4496ac999b20934f40acf44116c}\label{class_primitive_a90ade4496ac999b20934f40acf44116c}} 
+\mbox{\hyperlink{class_transform}{Transform}} \mbox{\hyperlink{class_primitive_a90ade4496ac999b20934f40acf44116c}{obj\+To\+World}}
+\begin{DoxyCompactList}\small\item\em Object to world transform. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_primitive_a99d734d04ac19afb5c086f90abe4f476}\label{class_primitive_a99d734d04ac19afb5c086f90abe4f476}} 
+\mbox{\hyperlink{class_transform}{Transform}} \mbox{\hyperlink{class_primitive_a99d734d04ac19afb5c086f90abe4f476}{world\+To\+Obj}}
+\begin{DoxyCompactList}\small\item\em World to object transform. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_primitive_a4c6d102affb9b8569a0000c728b07bfb}\label{class_primitive_a4c6d102affb9b8569a0000c728b07bfb}} 
+\mbox{\hyperlink{class_material}{Material}} $\ast$ \mbox{\hyperlink{class_primitive_a4c6d102affb9b8569a0000c728b07bfb}{material}}
+\begin{DoxyCompactList}\small\item\em The material of surface. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_primitive_a1934284f80b0b26f216ad551118e65cc}\label{class_primitive_a1934284f80b0b26f216ad551118e65cc}} 
+bool \mbox{\hyperlink{class_primitive_a1934284f80b0b26f216ad551118e65cc}{is\+Transformed}}
+\begin{DoxyCompactList}\small\item\em Is this primive already transformed (perf. optimization) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_primitive_a668eec3b66b4aa4d995c8b47c85d253a}\label{class_primitive_a668eec3b66b4aa4d995c8b47c85d253a}} 
+\mbox{\hyperlink{class_shape}{Shape}} $\ast$ \mbox{\hyperlink{class_primitive_a668eec3b66b4aa4d995c8b47c85d253a}{shape}}
+\begin{DoxyCompactList}\small\item\em Pointer to the shape. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_primitive_ad0f80173b7625a9f2855088adbae6b0e}\label{class_primitive_ad0f80173b7625a9f2855088adbae6b0e}} 
+int \mbox{\hyperlink{class_primitive_ad0f80173b7625a9f2855088adbae6b0e}{source\+Line}}
+\begin{DoxyCompactList}\small\item\em Line in the souurce code. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\mbox{\hyperlink{class_primitive}{Primitive}}
+
+Methods\+: bool intersect(\+Ray\& ray, float$\ast$ thit, Intersection$\ast$ in) bool intersect\+P(\+Ray\& ray) void get\+B\+R\+D\+F(\+Local\+Geo\& local, B\+R\+D\+F$\ast$ brdf);
+
+Notes\+: Abstract class for primitives in the scene 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_primitive_aa469be6577bcf2c249a47c6e44608155}\label{class_primitive_aa469be6577bcf2c249a47c6e44608155}} 
+\index{Primitive@{Primitive}!Primitive@{Primitive}}
+\index{Primitive@{Primitive}!Primitive@{Primitive}}
+\subsubsection{\texorpdfstring{Primitive()}{Primitive()}}
+{\footnotesize\ttfamily Primitive\+::\+Primitive (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_shape}{Shape}} $\ast$}]{obj }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Construct primitive with given shape 
+\begin{DoxyParams}{Parameters}
+{\em shape} & will be used as shape of this primitive \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_primitive_acf807003abb52d3224dda7a476f71d96}\label{class_primitive_acf807003abb52d3224dda7a476f71d96}} 
+\index{Primitive@{Primitive}!get\+Material@{get\+Material}}
+\index{get\+Material@{get\+Material}!Primitive@{Primitive}}
+\subsubsection{\texorpdfstring{get\+Material()}{getMaterial()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_material}{Material}}$\ast$ Primitive\+::get\+Material (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_surface_point}{Surface\+Point}} \&}]{surf\+Point }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Get material of this primitive 
+\begin{DoxyParams}{Parameters}
+{\em local} & can be used for procedural materals \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+B\+R\+DF of this material 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_primitive_adfe14a385e39f9e86ff31e659e3ed958}\label{class_primitive_adfe14a385e39f9e86ff31e659e3ed958}} 
+\index{Primitive@{Primitive}!intersect@{intersect}}
+\index{intersect@{intersect}!Primitive@{Primitive}}
+\subsubsection{\texorpdfstring{intersect()}{intersect()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool Primitive\+::intersect (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_ray}{Ray}}}]{ray,  }\item[{\mbox{\hyperlink{class_intersection}{Intersection}} \&}]{intersection,  }\item[{bool}]{cull\+Back }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Test intersection between shape and ray 
+\begin{DoxyParams}[1]{Parameters}
+ & {\em ray} & \\
+\hline
+\mbox{\tt in,out}  & {\em in} & intersection \\
+\hline
+ & {\em cull\+Back} & back face culling \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true for sucessfull intersection 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_primitive_ad92af2f561d08da5c74d539ce88b9ce4}\label{class_primitive_ad92af2f561d08da5c74d539ce88b9ce4}} 
+\index{Primitive@{Primitive}!intersect@{intersect}}
+\index{intersect@{intersect}!Primitive@{Primitive}}
+\subsubsection{\texorpdfstring{intersect()}{intersect()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bool Primitive\+::intersect (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_ray}{Ray}}}]{ray,  }\item[{bool}]{cull\+Back }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Test intersection between shape and ray 
+\begin{DoxyParams}{Parameters}
+{\em ray} & \\
+\hline
+{\em cull\+Back} & back face culling \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true for sucessfull intersection 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{primitive_8h}{primitive.\+h}}\end{DoxyCompactItemize}

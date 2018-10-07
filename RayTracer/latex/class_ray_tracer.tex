@@ -1,0 +1,47 @@
+\hypertarget{class_ray_tracer}{}\section{Ray\+Tracer Class Reference}
+\label{class_ray_tracer}\index{Ray\+Tracer@{Ray\+Tracer}}
+
+
+{\ttfamily \#include $<$raytracer.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_ray_tracer_a1981c0e5a621ea11dc37f8b072562ca8}\label{class_ray_tracer_a1981c0e5a621ea11dc37f8b072562ca8}} 
+\mbox{\hyperlink{class_ray_tracer_a1981c0e5a621ea11dc37f8b072562ca8}{Ray\+Tracer}} (const \mbox{\hyperlink{class_camera}{Camera}} \&camera, std\+::vector$<$ \mbox{\hyperlink{class_primitive}{Primitive}} $\ast$$>$ primitives, std\+::vector$<$ \mbox{\hyperlink{class_light}{Light}} $\ast$$>$ lights, int maxdepth, int illumination)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_ray_tracer_a6ff3cb8f226127037366ade6aeff95e5}\label{class_ray_tracer_a6ff3cb8f226127037366ade6aeff95e5}} 
+void \mbox{\hyperlink{class_ray_tracer_a6ff3cb8f226127037366ade6aeff95e5}{trace}} (\mbox{\hyperlink{class_ray}{Ray}} \&ray, int depth, \mbox{\hyperlink{class_color}{Color}} $\ast$color)
+\begin{DoxyCompactList}\small\item\em Trace ray. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_ray_tracer_ac62edf1f171bf05ef134b2358736422e}\label{class_ray_tracer_ac62edf1f171bf05ef134b2358736422e}} 
+int {\bfseries maxdepth}
+\item 
+\mbox{\Hypertarget{class_ray_tracer_af6369232f63621266929b4c3a9d62167}\label{class_ray_tracer_af6369232f63621266929b4c3a9d62167}} 
+int {\bfseries global\+Illumination}
+\item 
+\mbox{\Hypertarget{class_ray_tracer_ae9c76596c32ae88fa768e998d10bdae7}\label{class_ray_tracer_ae9c76596c32ae88fa768e998d10bdae7}} 
+\mbox{\hyperlink{class_group_primitives}{Group\+Primitives}} {\bfseries all\+Primitives}
+\item 
+\mbox{\Hypertarget{class_ray_tracer_a0ee8a7856ff835d6d30f3dbd8ab0aeb9}\label{class_ray_tracer_a0ee8a7856ff835d6d30f3dbd8ab0aeb9}} 
+\mbox{\hyperlink{class_group_primitives}{Group\+Primitives}} {\bfseries cam\+Primitives}
+\item 
+\mbox{\Hypertarget{class_ray_tracer_a511758fa4a2091c0951614753a4dd958}\label{class_ray_tracer_a511758fa4a2091c0951614753a4dd958}} 
+std\+::vector$<$ \mbox{\hyperlink{class_light}{Light}} $\ast$ $>$ {\bfseries lights}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\mbox{\hyperlink{class_ray_tracer}{Ray\+Tracer}}
+
+Methods\+: void trace(\+Ray\& ray, int depth)
+
+Notes\+:
+
+Shading is similar to hw2 Beware when you generate reflection ray, make sure the ray don’t start exactly on the surface, or the intersection routine may return intersection point at the starting point of the ray. (This apply to light ray generation as well) 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+raytracer.\+h\end{DoxyCompactItemize}

@@ -1,0 +1,19 @@
+var searchData=
+[
+  ['sample',['Sample',['../struct_sample.html',1,'']]],
+  ['sample_2eh',['sample.h',['../sample_8h.html',1,'']]],
+  ['sampler',['Sampler',['../class_sampler.html',1,'Sampler'],['../class_sampler.html#a5a0ac9c4fee9777b28caad6befad9d79',1,'Sampler::Sampler()']]],
+  ['sampler_2eh',['sampler.h',['../sampler_8h.html',1,'']]],
+  ['scale',['scale',['../class_transform.html#a8c96f4dcc6aee87b1a2b66b9fbdbfc7c',1,'Transform']]],
+  ['scene',['Scene',['../class_scene.html',1,'Scene'],['../class_scene.html#ad10176d75a9cc0da56626f682d083507',1,'Scene::Scene()']]],
+  ['scene_2eh',['scene.h',['../scene_8h.html',1,'']]],
+  ['set',['Set',['../class_color.html#abe5a97a40715b5474aca1576dcf0f3bd',1,'Color']]],
+  ['setprimitives',['setPrimitives',['../class_group_primitives.html#ace5b8c68e4a9f26416ccc4ab9ced8525',1,'GroupPrimitives']]],
+  ['settransformation',['setTransformation',['../class_transform.html#a527516549fad2a69271d82935e42e409',1,'Transform']]],
+  ['shape',['Shape',['../class_shape.html',1,'Shape'],['../class_primitive.html#a668eec3b66b4aa4d995c8b47c85d253a',1,'Primitive::shape()']]],
+  ['shape_2eh',['shape.h',['../shape_8h.html',1,'']]],
+  ['sourceline',['sourceLine',['../class_primitive.html#ad0f80173b7625a9f2855088adbae6b0e',1,'Primitive']]],
+  ['sphere',['Sphere',['../class_sphere.html',1,'Sphere'],['../class_sphere.html#acdc6a785051367320ea2fbbb66769b1a',1,'Sphere::Sphere()']]],
+  ['sphere_2eh',['sphere.h',['../sphere_8h.html',1,'']]],
+  ['surfacepoint',['SurfacePoint',['../class_surface_point.html',1,'SurfacePoint'],['../class_intersection.html#a2f432340bee6925251ec4e7895ac3a39',1,'Intersection::surfacePoint()']]]
+];

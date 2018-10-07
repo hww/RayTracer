@@ -1,0 +1,68 @@
+\hypertarget{class_base_primitive}{}\section{Base\+Primitive Class Reference}
+\label{class_base_primitive}\index{Base\+Primitive@{Base\+Primitive}}
+Inheritance diagram for Base\+Primitive\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_base_primitive}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_base_primitive_a06a4cf2f143fc0eb478d3ab97b53c536}\label{class_base_primitive_a06a4cf2f143fc0eb478d3ab97b53c536}} 
+\mbox{\hyperlink{class_base_primitive_a06a4cf2f143fc0eb478d3ab97b53c536}{Base\+Primitive}} ()
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{class_base_primitive_a608aa970836909d21c0413d894612eca}{intersect}} (\mbox{\hyperlink{class_ray}{Ray}} \&ray, bool cull\+Back)=0
+\item 
+virtual bool \mbox{\hyperlink{class_base_primitive_a1f9cb5f2c71f2e1f985513a154f22712}{intersect}} (\mbox{\hyperlink{class_ray}{Ray}} \&ray, \mbox{\hyperlink{class_intersection}{Intersection}} \&intersection, bool cull\+Back)=0
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_base_primitive_a608aa970836909d21c0413d894612eca}\label{class_base_primitive_a608aa970836909d21c0413d894612eca}} 
+\index{Base\+Primitive@{Base\+Primitive}!intersect@{intersect}}
+\index{intersect@{intersect}!Base\+Primitive@{Base\+Primitive}}
+\subsubsection{\texorpdfstring{intersect()}{intersect()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily virtual bool Base\+Primitive\+::intersect (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_ray}{Ray}} \&}]{ray,  }\item[{bool}]{cull\+Back }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Test intersection between ray and this primitive 
+\begin{DoxyParams}{Parameters}
+{\em ray} & \\
+\hline
+{\em cull} & back face culling \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true for sucessfull intersection 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_group_primitives_a17bca38224e782eb6660774b34947397}{Group\+Primitives}}.
+
+\mbox{\Hypertarget{class_base_primitive_a1f9cb5f2c71f2e1f985513a154f22712}\label{class_base_primitive_a1f9cb5f2c71f2e1f985513a154f22712}} 
+\index{Base\+Primitive@{Base\+Primitive}!intersect@{intersect}}
+\index{intersect@{intersect}!Base\+Primitive@{Base\+Primitive}}
+\subsubsection{\texorpdfstring{intersect()}{intersect()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily virtual bool Base\+Primitive\+::intersect (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_ray}{Ray}} \&}]{ray,  }\item[{\mbox{\hyperlink{class_intersection}{Intersection}} \&}]{intersection,  }\item[{bool}]{cull\+Back }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Test intersection between ray and this primitive 
+\begin{DoxyParams}[1]{Parameters}
+ & {\em ray} & \\
+\hline
+\mbox{\tt in,out}  & {\em intersection} & will contain result of intersection \\
+\hline
+ & {\em cull} & back face culling \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true for sucessfull intersection 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_group_primitives_ac958af04e2e275f28cb74751ad87575a}{Group\+Primitives}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{base__primitive_8h}{base\+\_\+primitive.\+h}}\end{DoxyCompactItemize}

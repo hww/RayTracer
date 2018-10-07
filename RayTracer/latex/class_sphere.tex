@@ -1,0 +1,101 @@
+\hypertarget{class_sphere}{}\section{Sphere Class Reference}
+\label{class_sphere}\index{Sphere@{Sphere}}
+
+
+{\ttfamily \#include $<$sphere.\+h$>$}
+
+Inheritance diagram for Sphere\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_sphere}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_sphere_acdc6a785051367320ea2fbbb66769b1a}{Sphere}} (const \mbox{\hyperlink{struct_vector}{Vector}} \&pos, float rad)
+\item 
+bool \mbox{\hyperlink{class_sphere_ab4700cd65d2bba22863d0bee673e8bf3}{intersect}} (\mbox{\hyperlink{class_ray}{Ray}} \&ray, \mbox{\hyperlink{class_intersection}{Intersection}} \&intersection, bool cull\+Back)
+\item 
+bool \mbox{\hyperlink{class_sphere_a0ca2b62d692108272b9b64857965838b}{intersect}} (\mbox{\hyperlink{class_ray}{Ray}} \&ray, bool cull\+Back)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_sphere_ad8604838ba9a34188843f422afdc7a8e}\label{class_sphere_ad8604838ba9a34188843f422afdc7a8e}} 
+\mbox{\hyperlink{struct_vector}{Vector}} \mbox{\hyperlink{class_sphere_ad8604838ba9a34188843f422afdc7a8e}{center}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_sphere}{Sphere}} center position. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_sphere_ae6f42f0da6679a2f0b4a22681ccccf38}\label{class_sphere_ae6f42f0da6679a2f0b4a22681ccccf38}} 
+float \mbox{\hyperlink{class_sphere_ae6f42f0da6679a2f0b4a22681ccccf38}{radius}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_sphere}{Sphere}}\textquotesingle{}s radius. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\mbox{\hyperlink{class_sphere}{Sphere}} primitive
+
+Fields\+: center position radius 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_sphere_acdc6a785051367320ea2fbbb66769b1a}\label{class_sphere_acdc6a785051367320ea2fbbb66769b1a}} 
+\index{Sphere@{Sphere}!Sphere@{Sphere}}
+\index{Sphere@{Sphere}!Sphere@{Sphere}}
+\subsubsection{\texorpdfstring{Sphere()}{Sphere()}}
+{\footnotesize\ttfamily Sphere\+::\+Sphere (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_vector}{Vector}} \&}]{pos,  }\item[{float}]{rad }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Construct sphere 
+\begin{DoxyParams}{Parameters}
+{\em pos} & position of center \\
+\hline
+{\em rad} & sphere radius \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_sphere_ab4700cd65d2bba22863d0bee673e8bf3}\label{class_sphere_ab4700cd65d2bba22863d0bee673e8bf3}} 
+\index{Sphere@{Sphere}!intersect@{intersect}}
+\index{intersect@{intersect}!Sphere@{Sphere}}
+\subsubsection{\texorpdfstring{intersect()}{intersect()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool Sphere\+::intersect (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_ray}{Ray}} \&}]{ray,  }\item[{\mbox{\hyperlink{class_intersection}{Intersection}} \&}]{intersection,  }\item[{bool}]{cull\+Back }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Test intersection between sphere and ray 
+\begin{DoxyParams}[1]{Parameters}
+ & {\em ray} & \\
+\hline
+\mbox{\tt in,out}  & {\em o\+Intersect} & intersection \\
+\hline
+ & {\em cull\+Back} & to cull back face culling (not used) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true for sucessful intersections 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_shape_a06081ad5df190daf858f295bd8e8a0e1}{Shape}}.
+
+\mbox{\Hypertarget{class_sphere_a0ca2b62d692108272b9b64857965838b}\label{class_sphere_a0ca2b62d692108272b9b64857965838b}} 
+\index{Sphere@{Sphere}!intersect@{intersect}}
+\index{intersect@{intersect}!Sphere@{Sphere}}
+\subsubsection{\texorpdfstring{intersect()}{intersect()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bool Sphere\+::intersect (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_ray}{Ray}} \&}]{ray,  }\item[{bool}]{cull\+Back }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Test intersection between sphere and ray 
+\begin{DoxyParams}{Parameters}
+{\em ray} & \\
+\hline
+{\em cull\+Back} & to cull back face culling (not used) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true for sucessful intersections 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_shape_a41cb78dcc1b919cdba2b7fbc0a1a0bc8}{Shape}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{sphere_8h}{sphere.\+h}}\end{DoxyCompactItemize}

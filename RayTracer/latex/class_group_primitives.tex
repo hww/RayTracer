@@ -1,0 +1,140 @@
+\hypertarget{class_group_primitives}{}\section{Group\+Primitives Class Reference}
+\label{class_group_primitives}\index{Group\+Primitives@{Group\+Primitives}}
+
+
+{\ttfamily \#include $<$group\+\_\+primitives.\+h$>$}
+
+Inheritance diagram for Group\+Primitives\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_group_primitives}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_group_primitives_ad09cb3eb5220543a5edf1f85a38e7244}{Group\+Primitives}} (std\+::vector$<$ \mbox{\hyperlink{class_primitive}{Primitive}} $\ast$$>$ primitives\+List)
+\item 
+\mbox{\hyperlink{class_group_primitives_a821c2b3b8a794ad486e518e313403e8f}{Group\+Primitives}} (std\+::vector$<$ \mbox{\hyperlink{class_primitive}{Primitive}} $\ast$$>$ primitives\+List, const \mbox{\hyperlink{struct_vector}{Vector}} \&light\+Dir)
+\item 
+void \mbox{\hyperlink{class_group_primitives_ace5b8c68e4a9f26416ccc4ab9ced8525}{set\+Primitives}} (std\+::vector$<$ \mbox{\hyperlink{class_primitive}{Primitive}} $\ast$$>$ primitives\+List, const \mbox{\hyperlink{struct_vector}{Vector}} \&light\+Dir)
+\item 
+virtual bool \mbox{\hyperlink{class_group_primitives_a17bca38224e782eb6660774b34947397}{intersect}} (\mbox{\hyperlink{class_ray}{Ray}} \&ray, bool cull\+Back)
+\item 
+virtual bool \mbox{\hyperlink{class_group_primitives_ac958af04e2e275f28cb74751ad87575a}{intersect}} (\mbox{\hyperlink{class_ray}{Ray}} \&ray, \mbox{\hyperlink{class_intersection}{Intersection}} \&intersection, bool cull\+Back)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_group_primitives_a694241c5449d75ea29669e4cc7d93d32}\label{class_group_primitives_a694241c5449d75ea29669e4cc7d93d32}} 
+std\+::vector$<$ \mbox{\hyperlink{class_primitive}{Primitive}} $\ast$ $>$ \mbox{\hyperlink{class_group_primitives_a694241c5449d75ea29669e4cc7d93d32}{primitives}}
+\begin{DoxyCompactList}\small\item\em The collection of primitive. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\mbox{\hyperlink{class_group_primitives}{Group\+Primitives}}
+
+Methods\+:
+
+\mbox{\hyperlink{class_group_primitives}{Group\+Primitives(vector$<$\+Primitive$\ast$$>$ list)}};
+
+bool intersect(\+Ray\& ray, float$\ast$ thit, Intersection$\ast$ in)
+
+bool intersect\+P(\+Ray\& ray)
+
+void get\+B\+R\+D\+F(\+Local\+Geo\& local, B\+R\+D\+F$\ast$ brdf) \{ exit(1); // This should never get called, because in-\/$>$primitive will // never be an aggregate primitive \}
+
+Notes\+:
+
+Constructor store the S\+TL vector of pointers to primitives. Intersect just loops through all the primitives in the list and call the intersect routine. Compare thit and return that of the nearest one (because we want the first hit).
+
+Also, the in-\/$>$primitive should be set to the pointer to that primitive. When you implement acceleration structure, it will replace this class. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_group_primitives_ad09cb3eb5220543a5edf1f85a38e7244}\label{class_group_primitives_ad09cb3eb5220543a5edf1f85a38e7244}} 
+\index{Group\+Primitives@{Group\+Primitives}!Group\+Primitives@{Group\+Primitives}}
+\index{Group\+Primitives@{Group\+Primitives}!Group\+Primitives@{Group\+Primitives}}
+\subsubsection{\texorpdfstring{Group\+Primitives()}{GroupPrimitives()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Group\+Primitives\+::\+Group\+Primitives (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{class_primitive}{Primitive}} $\ast$$>$}]{primitives\+List }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Constructor with collection of primitives 
+\begin{DoxyParams}{Parameters}
+{\em primitives\+List} & the collection of primitives \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_group_primitives_a821c2b3b8a794ad486e518e313403e8f}\label{class_group_primitives_a821c2b3b8a794ad486e518e313403e8f}} 
+\index{Group\+Primitives@{Group\+Primitives}!Group\+Primitives@{Group\+Primitives}}
+\index{Group\+Primitives@{Group\+Primitives}!Group\+Primitives@{Group\+Primitives}}
+\subsubsection{\texorpdfstring{Group\+Primitives()}{GroupPrimitives()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Group\+Primitives\+::\+Group\+Primitives (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{class_primitive}{Primitive}} $\ast$$>$}]{primitives\+List,  }\item[{const \mbox{\hyperlink{struct_vector}{Vector}} \&}]{light\+Dir }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Constructor this with collection of primitives. The method will use only faces oriented to the given dirrection 
+\begin{DoxyParams}{Parameters}
+{\em primitives\+List} & the collection of primitives \\
+\hline
+{\em light\+Dir} & direction of light \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_group_primitives_a17bca38224e782eb6660774b34947397}\label{class_group_primitives_a17bca38224e782eb6660774b34947397}} 
+\index{Group\+Primitives@{Group\+Primitives}!intersect@{intersect}}
+\index{intersect@{intersect}!Group\+Primitives@{Group\+Primitives}}
+\subsubsection{\texorpdfstring{intersect()}{intersect()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily virtual bool Group\+Primitives\+::intersect (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_ray}{Ray}} \&}]{ray,  }\item[{bool}]{cull\+Back }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Test intersection between ray and this primitive 
+\begin{DoxyParams}{Parameters}
+{\em ray} & \\
+\hline
+{\em cull} & back face culling \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true for sucessfull intersection 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_base_primitive_a608aa970836909d21c0413d894612eca}{Base\+Primitive}}.
+
+\mbox{\Hypertarget{class_group_primitives_ac958af04e2e275f28cb74751ad87575a}\label{class_group_primitives_ac958af04e2e275f28cb74751ad87575a}} 
+\index{Group\+Primitives@{Group\+Primitives}!intersect@{intersect}}
+\index{intersect@{intersect}!Group\+Primitives@{Group\+Primitives}}
+\subsubsection{\texorpdfstring{intersect()}{intersect()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily virtual bool Group\+Primitives\+::intersect (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_ray}{Ray}} \&}]{ray,  }\item[{\mbox{\hyperlink{class_intersection}{Intersection}} \&}]{intersection,  }\item[{bool}]{cull\+Back }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Test intersection between ray and this primitive 
+\begin{DoxyParams}[1]{Parameters}
+ & {\em ray} & \\
+\hline
+\mbox{\tt in,out}  & {\em intersection} & will contain result of intersection \\
+\hline
+ & {\em cull} & back face culling \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true for sucessfull intersection 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_base_primitive_a1f9cb5f2c71f2e1f985513a154f22712}{Base\+Primitive}}.
+
+\mbox{\Hypertarget{class_group_primitives_ace5b8c68e4a9f26416ccc4ab9ced8525}\label{class_group_primitives_ace5b8c68e4a9f26416ccc4ab9ced8525}} 
+\index{Group\+Primitives@{Group\+Primitives}!set\+Primitives@{set\+Primitives}}
+\index{set\+Primitives@{set\+Primitives}!Group\+Primitives@{Group\+Primitives}}
+\subsubsection{\texorpdfstring{set\+Primitives()}{setPrimitives()}}
+{\footnotesize\ttfamily void Group\+Primitives\+::set\+Primitives (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{class_primitive}{Primitive}} $\ast$$>$}]{primitives\+List,  }\item[{const \mbox{\hyperlink{struct_vector}{Vector}} \&}]{light\+Dir }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Set primitives. The method will use only faces oriented to the given dirrection 
+\begin{DoxyParams}{Parameters}
+{\em primitives\+List} & the collection of primitives \\
+\hline
+{\em light\+Dir} & direction of light \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{group__primitives_8h}{group\+\_\+primitives.\+h}}\end{DoxyCompactItemize}

@@ -1,0 +1,90 @@
+\hypertarget{class_shape}{}\section{Shape Class Reference}
+\label{class_shape}\index{Shape@{Shape}}
+
+
+{\ttfamily \#include $<$shape.\+h$>$}
+
+Inheritance diagram for Shape\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_shape}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual bool \mbox{\hyperlink{class_shape_a06081ad5df190daf858f295bd8e8a0e1}{intersect}} (\mbox{\hyperlink{class_ray}{Ray}} \&ray, \mbox{\hyperlink{class_intersection}{Intersection}} \&intersection, bool cull\+Back)
+\item 
+virtual bool \mbox{\hyperlink{class_shape_a41cb78dcc1b919cdba2b7fbc0a1a0bc8}{intersect}} (\mbox{\hyperlink{class_ray}{Ray}} \&ray, bool cull\+Back)
+\item 
+\mbox{\Hypertarget{class_shape_ad4f344dbda0fb8446805631c0c408a16}\label{class_shape_ad4f344dbda0fb8446805631c0c408a16}} 
+virtual bool \mbox{\hyperlink{class_shape_ad4f344dbda0fb8446805631c0c408a16}{pretransform}} (\mbox{\hyperlink{class_transform}{Transform}} \&obj2world)
+\begin{DoxyCompactList}\small\item\em Test intersection between shape and ray. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_shape_ac988eb692cfbfcaa1907491938a55b7a}\label{class_shape_ac988eb692cfbfcaa1907491938a55b7a}} 
+virtual bool \mbox{\hyperlink{class_shape_ac988eb692cfbfcaa1907491938a55b7a}{is\+Front}} (const \mbox{\hyperlink{struct_vector}{Vector}} \&dir)
+\begin{DoxyCompactList}\small\item\em Test if ray hit front side of shape. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\mbox{\hyperlink{class_shape}{Shape}}
+
+Methods\+:
+
+Test if ray intersects with the shape or not (in object space), if so, return intersection point and normal
+
+bool intersect(\+Ray\& ray, float$\ast$ thit, Local\+Geo$\ast$ local)
+
+Same as intersect, but just return whether there is any intersection or not
+
+bool intersect\+P(\+Ray\& ray)
+
+Notes\+: \mbox{\hyperlink{class_triangle}{Triangle}} and \mbox{\hyperlink{class_sphere}{Sphere}} are probably best implemented here The intersection with the ray at t outside the range \mbox{[}t\+\_\+min, t\+\_\+max\mbox{]} should return false. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_shape_a06081ad5df190daf858f295bd8e8a0e1}\label{class_shape_a06081ad5df190daf858f295bd8e8a0e1}} 
+\index{Shape@{Shape}!intersect@{intersect}}
+\index{intersect@{intersect}!Shape@{Shape}}
+\subsubsection{\texorpdfstring{intersect()}{intersect()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily virtual bool Shape\+::intersect (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_ray}{Ray}} \&}]{ray,  }\item[{\mbox{\hyperlink{class_intersection}{Intersection}} \&}]{intersection,  }\item[{bool}]{cull\+Back }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Test intersection between shape and ray 
+\begin{DoxyParams}[1]{Parameters}
+ & {\em ray} & \\
+\hline
+\mbox{\tt in,out}  & {\em in} & intersection \\
+\hline
+ & {\em cull} & back face culling \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true for sucessfull intersection 
+\end{DoxyReturn}
+
+
+Reimplemented in \mbox{\hyperlink{class_triangle_ad78a148da18386f99f23731ce7de431f}{Triangle}}, and \mbox{\hyperlink{class_sphere_ab4700cd65d2bba22863d0bee673e8bf3}{Sphere}}.
+
+\mbox{\Hypertarget{class_shape_a41cb78dcc1b919cdba2b7fbc0a1a0bc8}\label{class_shape_a41cb78dcc1b919cdba2b7fbc0a1a0bc8}} 
+\index{Shape@{Shape}!intersect@{intersect}}
+\index{intersect@{intersect}!Shape@{Shape}}
+\subsubsection{\texorpdfstring{intersect()}{intersect()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily virtual bool Shape\+::intersect (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_ray}{Ray}} \&}]{ray,  }\item[{bool}]{cull\+Back }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Test intersection between shape and ray 
+\begin{DoxyParams}{Parameters}
+{\em ray} & \\
+\hline
+{\em cull} & back face culling \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true for sucessfull intersection 
+\end{DoxyReturn}
+
+
+Reimplemented in \mbox{\hyperlink{class_triangle_abf8edc617d32e7c651a01efc0cb4647e}{Triangle}}, and \mbox{\hyperlink{class_sphere_a0ca2b62d692108272b9b64857965838b}{Sphere}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{shape_8h}{shape.\+h}}\end{DoxyCompactItemize}

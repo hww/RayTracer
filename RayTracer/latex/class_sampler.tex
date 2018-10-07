@@ -1,0 +1,88 @@
+\hypertarget{class_sampler}{}\section{Sampler Class Reference}
+\label{class_sampler}\index{Sampler@{Sampler}}
+
+
+{\ttfamily \#include $<$sampler.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_sampler_a5a0ac9c4fee9777b28caad6befad9d79}{Sampler}} (float w, float h, int antialysing)
+\item 
+\mbox{\hyperlink{struct_vector}{Vector}} \mbox{\hyperlink{class_sampler_a0e3e399b62cf61f33d476a770b6ff2ef}{get\+Random\+Sample}} (int index, float px, float py)
+\item 
+\mbox{\hyperlink{struct_vector}{Vector}} \mbox{\hyperlink{class_sampler_a23190051e449961267baed73eb53d90b}{get\+Grid\+Sample}} (int index, float px, float py)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Info\+: \mbox{\hyperlink{class_sampler}{Sampler}} is similar to iterator. It will generate (x,y) of a screen sample and return true.
+
+Next time it gets called, it will generate another sample for the next pixel. It will return false when all the samples from all the pixels
+
+are generated. (In our case, we generate 1 sample per pixel, at the pixel sample. Later on, if we want to do multi-\/sample per pixel, we need to modify this class.
+
+Methods\+: bool get\+Sample(\+Sample$\ast$ sample); 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_sampler_a5a0ac9c4fee9777b28caad6befad9d79}\label{class_sampler_a5a0ac9c4fee9777b28caad6befad9d79}} 
+\index{Sampler@{Sampler}!Sampler@{Sampler}}
+\index{Sampler@{Sampler}!Sampler@{Sampler}}
+\subsubsection{\texorpdfstring{Sampler()}{Sampler()}}
+{\footnotesize\ttfamily Sampler\+::\+Sampler (\begin{DoxyParamCaption}\item[{float}]{w,  }\item[{float}]{h,  }\item[{int}]{antialysing }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Construct new sampler 
+\begin{DoxyParams}{Parameters}
+{\em w} & The width of picture \\
+\hline
+{\em h} & The height of picture \\
+\hline
+{\em aalias} & Mount of rays/samples per each pixel \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_sampler_a23190051e449961267baed73eb53d90b}\label{class_sampler_a23190051e449961267baed73eb53d90b}} 
+\index{Sampler@{Sampler}!get\+Grid\+Sample@{get\+Grid\+Sample}}
+\index{get\+Grid\+Sample@{get\+Grid\+Sample}!Sampler@{Sampler}}
+\subsubsection{\texorpdfstring{get\+Grid\+Sample()}{getGridSample()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_vector}{Vector}} Sampler\+::get\+Grid\+Sample (\begin{DoxyParamCaption}\item[{int}]{index,  }\item[{float}]{px,  }\item[{float}]{py }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Get random screen position in given pixel coordinates 
+\begin{DoxyParams}{Parameters}
+{\em index} & is the sample\textquotesingle{}s index. For antialysing 1 will be all the time 0. Also for index 0 sampler return exact coordinate of pixel \\
+\hline
+{\em px} & pixel\textquotesingle{}s x coordinate \\
+\hline
+{\em py} & pixel\textquotesingle{}s y coordinate \\
+\hline
+{\em sample\+Weight} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+random position inside pixel 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_sampler_a0e3e399b62cf61f33d476a770b6ff2ef}\label{class_sampler_a0e3e399b62cf61f33d476a770b6ff2ef}} 
+\index{Sampler@{Sampler}!get\+Random\+Sample@{get\+Random\+Sample}}
+\index{get\+Random\+Sample@{get\+Random\+Sample}!Sampler@{Sampler}}
+\subsubsection{\texorpdfstring{get\+Random\+Sample()}{getRandomSample()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_vector}{Vector}} Sampler\+::get\+Random\+Sample (\begin{DoxyParamCaption}\item[{int}]{index,  }\item[{float}]{px,  }\item[{float}]{py }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Get random screen position in given pixel coordinates 
+\begin{DoxyParams}{Parameters}
+{\em index} & is the sample\textquotesingle{}s index. For antialysing 1 will be all the time 0. Also for index 0 sampler return exact coordinate of pixel \\
+\hline
+{\em px} & pixel\textquotesingle{}s x coordinate \\
+\hline
+{\em py} & pixel\textquotesingle{}s y coordinate \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+random position inside pixel 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{sampler_8h}{sampler.\+h}}\end{DoxyCompactItemize}

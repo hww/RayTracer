@@ -1,0 +1,103 @@
+\hypertarget{class_light}{}\section{Light Class Reference}
+\label{class_light}\index{Light@{Light}}
+
+
+{\ttfamily \#include $<$light.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_light_a69ca971ea95f41b226e12e02094ba1f2}{Light}} (float x, float y, float z, float r, float g, float b, bool is\+\_\+point)
+\item 
+\mbox{\Hypertarget{class_light_acfc5fe7c64a270977b3a5a2e53a0fb9c}\label{class_light_acfc5fe7c64a270977b3a5a2e53a0fb9c}} 
+\mbox{\hyperlink{class_ray}{Ray}} {\bfseries get\+Ray} (const \mbox{\hyperlink{class_surface_point}{Surface\+Point}} \&surf\+Point)
+\item 
+\mbox{\hyperlink{class_color}{Color}} \mbox{\hyperlink{class_light_a0fb5b95b28c59924030681c0d2646e87}{get\+Color}} (const \mbox{\hyperlink{class_ray}{Ray}} \&ray)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_light_a88ff3e89ced966a6a882ac57483b500b}\label{class_light_a88ff3e89ced966a6a882ac57483b500b}} 
+bool {\bfseries is\+Point}
+\item 
+\mbox{\Hypertarget{class_light_a48927a23d97db2c956d0b206fbe06be2}\label{class_light_a48927a23d97db2c956d0b206fbe06be2}} 
+\mbox{\hyperlink{struct_vector}{Vector}} {\bfseries pos}
+\item 
+\mbox{\Hypertarget{class_light_ad7a168d26aed1bf7cca1a8d8e6f8ada4}\label{class_light_ad7a168d26aed1bf7cca1a8d8e6f8ada4}} 
+\mbox{\hyperlink{class_color}{Color}} {\bfseries color}
+\item 
+float \mbox{\hyperlink{class_light_a27af00db907fd279ba3e342d6c5ec8c2}{attenuation\+Const}}
+\item 
+\mbox{\Hypertarget{class_light_a6fe2e610682fa03bdb3d5a3036c0ec4a}\label{class_light_a6fe2e610682fa03bdb3d5a3036c0ec4a}} 
+float {\bfseries attenuation\+Linear}
+\item 
+\mbox{\Hypertarget{class_light_a1208ffdf5fd52614c5fd2b6ea787921c}\label{class_light_a1208ffdf5fd52614c5fd2b6ea787921c}} 
+float {\bfseries attenuation\+Quadratic}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\mbox{\hyperlink{class_light}{Light}}
+
+Methods\+:
+
+void generate\+Light\+Ray(\+Local\+Geo\& local, Ray$\ast$ lray, Color$\ast$ lcolor);
+
+Notes\+:
+
+This is an abstract class that will generate a ray starting from the position stored in local to the position of the light source.
+
+You might want to consider creating 2 derived classes for point light source and directional light source. For directional light, the origin of the ray is the same, and the ray points to the light direction, however, t\+\_\+max is infinity. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_light_a69ca971ea95f41b226e12e02094ba1f2}\label{class_light_a69ca971ea95f41b226e12e02094ba1f2}} 
+\index{Light@{Light}!Light@{Light}}
+\index{Light@{Light}!Light@{Light}}
+\subsubsection{\texorpdfstring{Light()}{Light()}}
+{\footnotesize\ttfamily Light\+::\+Light (\begin{DoxyParamCaption}\item[{float}]{x,  }\item[{float}]{y,  }\item[{float}]{z,  }\item[{float}]{r,  }\item[{float}]{g,  }\item[{float}]{b,  }\item[{bool}]{is\+\_\+point }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Create light source 
+\begin{DoxyParams}{Parameters}
+{\em x} & position \\
+\hline
+{\em y} & position \\
+\hline
+{\em z} & position \\
+\hline
+{\em r} & color \\
+\hline
+{\em g} & color \\
+\hline
+{\em b} & color \\
+\hline
+{\em is\+\_\+point} & is point light? Other case directional \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_light_a0fb5b95b28c59924030681c0d2646e87}\label{class_light_a0fb5b95b28c59924030681c0d2646e87}} 
+\index{Light@{Light}!get\+Color@{get\+Color}}
+\index{get\+Color@{get\+Color}!Light@{Light}}
+\subsubsection{\texorpdfstring{get\+Color()}{getColor()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_color}{Color}} Light\+::get\+Color (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_ray}{Ray}} \&}]{ray }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+get color of light for given ray 
+\begin{DoxyParams}{Parameters}
+{\em ray} & to the light \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{class_light_a27af00db907fd279ba3e342d6c5ec8c2}\label{class_light_a27af00db907fd279ba3e342d6c5ec8c2}} 
+\index{Light@{Light}!attenuation\+Const@{attenuation\+Const}}
+\index{attenuation\+Const@{attenuation\+Const}!Light@{Light}}
+\subsubsection{\texorpdfstring{attenuation\+Const}{attenuationConst}}
+{\footnotesize\ttfamily float Light\+::attenuation\+Const}
+
+attenuation const linear quadratic Sets the constant, linear and quadratic attenuations (default 1,0,0) as in Open\+GL. By default there is no attenuation (the constant term is 1, linear and quadratic are 0; that\textquotesingle{}s what we mean by 1,0,0). 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{light_8h}{light.\+h}}\end{DoxyCompactItemize}

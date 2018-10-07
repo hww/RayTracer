@@ -1,0 +1,162 @@
+\hypertarget{class_scene}{}\section{Scene Class Reference}
+\label{class_scene}\index{Scene@{Scene}}
+
+
+{\ttfamily \#include $<$scene.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_scene_ad10176d75a9cc0da56626f682d083507}\label{class_scene_ad10176d75a9cc0da56626f682d083507}} 
+\mbox{\hyperlink{class_scene_ad10176d75a9cc0da56626f682d083507}{Scene}} ()
+\begin{DoxyCompactList}\small\item\em Construct new scene with default parameters. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_scene_a4ddf2d16f371ee9533b3faf1dd5ddfb1}\label{class_scene_a4ddf2d16f371ee9533b3faf1dd5ddfb1}} 
+void \mbox{\hyperlink{class_scene_a4ddf2d16f371ee9533b3faf1dd5ddfb1}{render}} ()
+\begin{DoxyCompactList}\small\item\em Render scene to file. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_scene_a4eda4f1e276891972df0227caeba28d8}\label{class_scene_a4eda4f1e276891972df0227caeba28d8}} 
+void \mbox{\hyperlink{class_scene_a4eda4f1e276891972df0227caeba28d8}{matransform}} (std\+::stack$<$ mat4 $>$ \&transfstack, G\+Lfloat $\ast$values)
+\begin{DoxyCompactList}\small\item\em The function below applies the appropriate transform to a 4-\/vector. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_scene_a51f2ec69429e96de84ec36ae929dd1e6}\label{class_scene_a51f2ec69429e96de84ec36ae929dd1e6}} 
+void \mbox{\hyperlink{class_scene_a51f2ec69429e96de84ec36ae929dd1e6}{rightmultiply}} (const mat4 \&M, std\+::stack$<$ mat4 $>$ \&transfstack)
+\begin{DoxyCompactList}\small\item\em Right matrix multiplication. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_scene_aa3778cb6ad047c2625e30d054260feb2}{readvals}} (stringstream \&s, const int numvals, G\+Lfloat $\ast$values)
+\item 
+\mbox{\Hypertarget{class_scene_a08f9176af0dc288404db6b789a949c0a}\label{class_scene_a08f9176af0dc288404db6b789a949c0a}} 
+\mbox{\hyperlink{class_material}{Material}} $\ast$ \mbox{\hyperlink{class_scene_a08f9176af0dc288404db6b789a949c0a}{Get\+Primitive\+Material}} ()
+\begin{DoxyCompactList}\small\item\em Check if primitive material is null then make it. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_scene_a1ecf3236a1ec2895c6f5b0a3ffe948ae}\label{class_scene_a1ecf3236a1ec2895c6f5b0a3ffe948ae}} 
+void \mbox{\hyperlink{class_scene_a1ecf3236a1ec2895c6f5b0a3ffe948ae}{readfile}} (string filename)
+\begin{DoxyCompactList}\small\item\em Read source file. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{class_scene_a13a1664c71ce40b237e0a5de3a127357}{output}}
+\item 
+\mbox{\Hypertarget{class_scene_a6191b1f812e96786a71c53d0c8145fd3}\label{class_scene_a6191b1f812e96786a71c53d0c8145fd3}} 
+int \mbox{\hyperlink{class_scene_a6191b1f812e96786a71c53d0c8145fd3}{maxdepth}}
+\begin{DoxyCompactList}\small\item\em The maximum depth (number of bounces) for a ray (default should be 5). \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_scene_ae842faf7b4068677255c57522c8b2494}\label{class_scene_ae842faf7b4068677255c57522c8b2494}} 
+int \mbox{\hyperlink{class_scene_ae842faf7b4068677255c57522c8b2494}{glob\+Illumination}}
+\begin{DoxyCompactList}\small\item\em how many global illumination rays \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_scene_a9596e2a8193b3e1c13f3f427876496f5}\label{class_scene_a9596e2a8193b3e1c13f3f427876496f5}} 
+int \mbox{\hyperlink{class_scene_a9596e2a8193b3e1c13f3f427876496f5}{antialias}}
+\begin{DoxyCompactList}\small\item\em Antialis level. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_scene_a5dbdc611abc51e326dd81d4210f946c3}\label{class_scene_a5dbdc611abc51e326dd81d4210f946c3}} 
+std\+::vector$<$ \mbox{\hyperlink{class_primitive}{Primitive}} $\ast$ $>$ \mbox{\hyperlink{class_scene_a5dbdc611abc51e326dd81d4210f946c3}{primitive\+List}}
+\begin{DoxyCompactList}\small\item\em Primitives. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_scene_a23ad3b6aee4fac7a3acb9a5de0f3f8bb}\label{class_scene_a23ad3b6aee4fac7a3acb9a5de0f3f8bb}} 
+std\+::vector$<$ \mbox{\hyperlink{class_light}{Light}} $\ast$ $>$ {\bfseries light\+List}
+\item 
+float \mbox{\hyperlink{class_scene_a0bb543364c97ad089c167f95e5b06881}{attenuation\+Const}}
+\item 
+\mbox{\Hypertarget{class_scene_a3fc3a2641dadd0e6dfc020a4513a5c57}\label{class_scene_a3fc3a2641dadd0e6dfc020a4513a5c57}} 
+float {\bfseries attenuation\+Linear}
+\item 
+\mbox{\Hypertarget{class_scene_afdd9715f1cab3d5560e5cb16a3aabcec}\label{class_scene_afdd9715f1cab3d5560e5cb16a3aabcec}} 
+float {\bfseries attenuation\+Quadratic}
+\item 
+int \mbox{\hyperlink{class_scene_abf5e39ffd2c12b92cb54ce87fb2958cf}{maxverts}}
+\item 
+int \mbox{\hyperlink{class_scene_ab00585f7f65f5a3c49e4a59432b2083c}{maxvertnorms}}
+\item 
+\mbox{\Hypertarget{class_scene_a20f00fc7ba5bce3077f280002fa5626a}\label{class_scene_a20f00fc7ba5bce3077f280002fa5626a}} 
+std\+::vector$<$ \mbox{\hyperlink{struct_vector}{Vector}} $>$ \mbox{\hyperlink{class_scene_a20f00fc7ba5bce3077f280002fa5626a}{vertices}}
+\begin{DoxyCompactList}\small\item\em Array of vertices. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_scene_aaeaa49b74e1f09cb91186e3f8bcf3af8}\label{class_scene_aaeaa49b74e1f09cb91186e3f8bcf3af8}} 
+std\+::vector$<$ \mbox{\hyperlink{struct_vector}{Vector}} $>$ \mbox{\hyperlink{class_scene_aaeaa49b74e1f09cb91186e3f8bcf3af8}{normals}}
+\begin{DoxyCompactList}\small\item\em Array of normals. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\textbf{ }\par
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_scene_a99ea310cee6775f4f5bef1940e647cf1}\label{class_scene_a99ea310cee6775f4f5bef1940e647cf1}} 
+int \mbox{\hyperlink{class_scene_a99ea310cee6775f4f5bef1940e647cf1}{width}}
+\begin{DoxyCompactList}\small\item\em The size command must be the first command of the file, which controls the image size. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_scene_a03e1d101ff6c2dbbe8da3ba812cde0f7}\label{class_scene_a03e1d101ff6c2dbbe8da3ba812cde0f7}} 
+int \mbox{\hyperlink{class_scene_a03e1d101ff6c2dbbe8da3ba812cde0f7}{height}}
+\begin{DoxyCompactList}\small\item\em The size command must be the first command of the file, which controls the image size. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+\textbf{ }\par
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_material}{Material}} \mbox{\hyperlink{class_scene_a0a38f5f1255de8f6f5826e7dacb8cbd7}{material\+State}}
+\begin{DoxyCompactList}\small\item\em Materials (read from file) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_scene_ab86c6bccfbab77ca61fd40459b973cd5}\label{class_scene_ab86c6bccfbab77ca61fd40459b973cd5}} 
+\mbox{\hyperlink{class_material}{Material}} $\ast$ \mbox{\hyperlink{class_scene_ab86c6bccfbab77ca61fd40459b973cd5}{prim\+Material}}
+\begin{DoxyCompactList}\small\item\em This is material. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+\textbf{ }\par
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_scene_af9f98b854a542727409a27fd51982fc0}\label{class_scene_af9f98b854a542727409a27fd51982fc0}} 
+\mbox{\hyperlink{struct_vector}{Vector}} {\bfseries eyeinit}
+\item 
+\mbox{\Hypertarget{class_scene_acc674e1ead5cd3178883db9253cd1b5d}\label{class_scene_acc674e1ead5cd3178883db9253cd1b5d}} 
+\mbox{\hyperlink{struct_vector}{Vector}} {\bfseries upinit}
+\item 
+\mbox{\Hypertarget{class_scene_ad9b3cf8cdb69fb9e6eac7462f3e3ec5b}\label{class_scene_ad9b3cf8cdb69fb9e6eac7462f3e3ec5b}} 
+\mbox{\hyperlink{struct_vector}{Vector}} {\bfseries center}
+\item 
+\mbox{\Hypertarget{class_scene_a27ca6faa0756d653d84661e0b29096fe}\label{class_scene_a27ca6faa0756d653d84661e0b29096fe}} 
+float {\bfseries fovy}
+\end{DoxyCompactItemize}
+
+
+
+\subsection{Detailed Description}
+\mbox{\hyperlink{class_scene}{Scene}} can be defined by text based matalaguage. After completition defining scene the scene can be rendered.
+
+Methods\+:
+
+The main rendering loop
+
+void \mbox{\hyperlink{class_scene_a4ddf2d16f371ee9533b3faf1dd5ddfb1}{render()}} \{ while (!sampler.generate\+Sample(\&sample) \{ camera.\+generate\+Ray(sample, \&ray); raytracer.\+trace(ray, \&color); film.\+commit(sample, color); \} film.\+write\+Image(); \} 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_scene_aa3778cb6ad047c2625e30d054260feb2}\label{class_scene_aa3778cb6ad047c2625e30d054260feb2}} 
+\index{Scene@{Scene}!readvals@{readvals}}
+\index{readvals@{readvals}!Scene@{Scene}}
+\subsubsection{\texorpdfstring{readvals()}{readvals()}}
+{\footnotesize\ttfamily bool Scene\+::readvals (\begin{DoxyParamCaption}\item[{stringstream \&}]{s,  }\item[{const int}]{numvals,  }\item[{G\+Lfloat $\ast$}]{values }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Function to read the input data values Use is optional, but should be very helpful in parsing. 
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{class_scene_a0bb543364c97ad089c167f95e5b06881}\label{class_scene_a0bb543364c97ad089c167f95e5b06881}} 
+\index{Scene@{Scene}!attenuation\+Const@{attenuation\+Const}}
+\index{attenuation\+Const@{attenuation\+Const}!Scene@{Scene}}
+\subsubsection{\texorpdfstring{attenuation\+Const}{attenuationConst}}
+{\footnotesize\ttfamily float Scene\+::attenuation\+Const}
+
+attenuation const linear quadratic Sets the constant, linear and quadratic attenuations (default 1,0,0) as in Open\+GL. By default there is no attenuation (the constant term is 1, linear and quadratic are 0; that\textquotesingle{}s what we mean by 1,0,0). \mbox{\Hypertarget{class_scene_a0a38f5f1255de8f6f5826e7dacb8cbd7}\label{class_scene_a0a38f5f1255de8f6f5826e7dacb8cbd7}} 
+\index{Scene@{Scene}!material\+State@{material\+State}}
+\index{material\+State@{material\+State}!Scene@{Scene}}
+\subsubsection{\texorpdfstring{material\+State}{materialState}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_material}{Material}} Scene\+::material\+State}
+
+
+
+Materials (read from file) 
+
+With multiple objects, these are colors for each. \mbox{\Hypertarget{class_scene_ab00585f7f65f5a3c49e4a59432b2083c}\label{class_scene_ab00585f7f65f5a3c49e4a59432b2083c}} 
+\index{Scene@{Scene}!maxvertnorms@{maxvertnorms}}
+\index{maxvertnorms@{maxvertnorms}!Scene@{Scene}}
+\subsubsection{\texorpdfstring{maxvertnorms}{maxvertnorms}}
+{\footnotesize\ttfamily int Scene\+::maxvertnorms}
+
+Defines a maximum number of vertices with normals for later specifications. It must be set before vertices with normals are defined. (same discussion as above) \mbox{\Hypertarget{class_scene_abf5e39ffd2c12b92cb54ce87fb2958cf}\label{class_scene_abf5e39ffd2c12b92cb54ce87fb2958cf}} 
+\index{Scene@{Scene}!maxverts@{maxverts}}
+\index{maxverts@{maxverts}!Scene@{Scene}}
+\subsubsection{\texorpdfstring{maxverts}{maxverts}}
+{\footnotesize\ttfamily int Scene\+::maxverts}
+
+Defines a maximum number of vertices for later triangle specifications. It must be set before vertices are defined. (Your program may not need this; it is simply a convenience to allocate arrays accordingly. You can ignore this command \mbox{[}but still parse it\mbox{]} if you don\textquotesingle{}t need it). \mbox{\Hypertarget{class_scene_a13a1664c71ce40b237e0a5de3a127357}\label{class_scene_a13a1664c71ce40b237e0a5de3a127357}} 
+\index{Scene@{Scene}!output@{output}}
+\index{output@{output}!Scene@{Scene}}
+\subsubsection{\texorpdfstring{output}{output}}
+{\footnotesize\ttfamily std\+::string Scene\+::output}
+
+The output file to which the image should be written. You can either require this to be specified in the input, or you can use a suitable default like stdout or raytrace.\+png (The final files should be .png, with the specific names the autograder requests). 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{scene_8h}{scene.\+h}}\end{DoxyCompactItemize}

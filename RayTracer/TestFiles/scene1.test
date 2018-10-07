@@ -1,0 +1,75 @@
+# Test Scene 3
+# Intended to show transforms
+# I know it's not the most exciting of scenes...
+
+size 640 480 
+output scene1.png
+
+camera 5 5 5   0 0 0  0 1 0  45
+
+directional  -8 0 0   1.0 0.0 0.0
+directional  0 -8 0   0.0 1.0 0.0
+directional  0 0 -8   0.0 0.0 1.0
+
+emission 0.1 0.1 0.1
+diffuse  0.5 0.5 0.5
+#shininess 20
+#specular 1 1 1
+
+
+maxverts 8
+
+vertex -1 -1 -1
+vertex +1 -1 -1 
+vertex +1 +1 -1 
+vertex -1 +1 -1 
+vertex -1 -1 +1
+vertex +1 -1 +1 
+vertex +1 +1 +1
+vertex -1 +1 +1
+
+pushTransform
+# The basic camera transform to return to for new parts
+
+# The actual cube definition.  Since no instancing is supported, I will just 
+# repeat this to create many cubes.  For extra credit, you can implement 
+# instancing to make this simpler.  Alternatively, define a ray-cube 
+# intersection test.
+
+ambient 0.2 0.2 0.2 
+popTransform
+pushTransform
+translate  0 0 0
+rotate 0 1 0 0
+scale 0.25 0.25 0.25
+tri 0 1 5 
+tri 0 5 4 
+tri 3 7 6
+tri 3 6 2
+tri 1 2 6
+tri 1 6 5 
+tri 0 7 3 
+tri 0 4 7 
+tri 0 3 2 
+tri 0 2 1
+
+tri 4 5 6 
+tri 4 6 7 
+
+# Now draw the spheres
+
+ambient 0.2 0.2 0.2 
+
+popTransform
+pushTransform 
+translate  2 0 0
+rotate 0 1 0 0
+scale 1 1 1 
+sphere 0 0 0 1
+
+popTransform
+pushTransform 
+translate  -2 0 0
+rotate 0 1 0 0
+scale 1 1 1 
+sphere 0 0 0 1

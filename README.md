@@ -11,11 +11,11 @@ The precision of renderer was specially reduced to produce images suitable for a
 
 ## Features
 
-  Raytracing with varying tracing depth
-  Directional and point lights
-  Antialiasing
-  Basic materials
-  Global illumination
-  Text file based to define the world
+- Raytracing with varying tracing depth
+- Directional and point lights
+- Antialiasing
+- Basic materials
+- Global illumination
+- Text file based to define the world
 
 ![The result picture](RayTracer/scene6-alt.png)

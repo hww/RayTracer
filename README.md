@@ -1,20 +1,21 @@
 # RayTracer
 
-Simple ray tracer for on-line course. 
+Simple ray tracer for on-line course.
 
-The project was rapidly prototyped, and that is why has some of limitations:
+The project was rapidly prototyped and has some resulting limitations:
 
-Most of sources in the header files and i this it is not the problem for such small project.
-The project is not optimized for perfromance or memory footprint.
-The precision of renderer was specialy decreases to make this source code not workable for new students.
+Most of the source is in header files. It's not a problem for such small project.
+The project is not optimized for performance or memory footprint.
 
-Features
+(The renderer's precision is reduced in this published source code, to not produce images that could be used for course credit.)
 
-  Raytracing with varying tracing depth
-  Directional and point lights
-  Antialysing
-  Basic materials
-  Global illumination
-  Text file based to define the world
+## Features
+
+- Raytracing with varying tracing depth
+- Directional and point lights
+- Antialiasing
+- Basic materials
+- Global illumination
+- Text file based to define the world
 
 ![The result picture](RayTracer/scene6-alt.png)

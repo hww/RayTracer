@@ -14,19 +14,19 @@
 
 /**
  * Shape
- * 
+ *
  * Methods:
- * 
+ *
  *   Test if ray intersects with the shape or not (in object space), if so,
  *   return intersection point and normal
- * 
- *   bool intersect(Ray& ray, float* thit, LocalGeo* local)
- * 
+ *
+ *   intersect(Ray& ray, Intersection& intersection, bool cullBack)
+ *
  *   Same as intersect, but just return whether there is any intersection or
  *   not
- * 
- *   bool intersectP(Ray& ray)
- * 
+ *
+ *   intersect(Ray& ray, bool cullBack) 
+ *
  * Notes:
  *   Triangle and Sphere are probably best implemented here
  *   The intersection with the ray at t outside the range [t_min, t_max]
@@ -36,21 +36,21 @@ class Shape {
 public:
     Shape()
     { }
-	/// Test intersection between shape and ray
-	/// @param ray 
-	/// @param[in,out] in intersection
-	/// @param cull back face culling
-	/// @result true for sucessfull intersection
-	virtual bool intersect(Ray& ray, Intersection& intersection, bool cullBack) { return false; }
-	/// Test intersection between shape and ray
-	/// @param ray 
-	/// @param cull back face culling
-	/// @result true for sucessfull intersection
-	virtual bool intersect(Ray& ray, bool cullBack) { return false; }
-	/// Test intersection between shape and ray
-	virtual bool pretransform(Transform& obj2world) { return false; }
-	/// Test if ray hit front side of shape
-	virtual bool isFront(const Vector& dir) { return true; }
+    /// Test intersection between shape and ray
+    /// @param ray
+    /// @param[in,out] in intersection
+    /// @param cull back face culling
+    /// @result true for successful intersection
+    virtual bool intersect(Ray& ray, Intersection& intersection, bool cullBack) { return false; }
+    /// Test intersection between shape and ray
+    /// @param ray
+    /// @param cull back face culling
+    /// @result true for successful intersection
+    virtual bool intersect(Ray& ray, bool cullBack) { return false; }
+    /// Test intersection between shape and ray
+    virtual bool pretransform(Transform& obj2world) { return false; }
+    /// Test if ray hit front side of shape
+    virtual bool isFront(const Vector& dir) { return true; }
 
 };
 

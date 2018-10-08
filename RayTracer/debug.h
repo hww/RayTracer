@@ -10,8 +10,8 @@
 
 #include <stdarg.h>
 
-/// this function used in case if target platform for some reason 
-/// missing sprintf function.
+/// this function used in case if target platform for some reason
+/// missing 'sprintf' function.
 /// this is safe and convenient but not exactly efficient
 inline std::string format(const char* fmt, ...) {
     int size = 512;

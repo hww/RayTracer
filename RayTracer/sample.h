@@ -8,7 +8,7 @@
 #ifndef RayTracer2_sample_h
 #define RayTracer2_sample_h
 
-/** 
+/**
  * Sample is the point on virtual screen. Contains only x,y coordinates of this point
  */
 struct Sample {

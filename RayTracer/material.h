@@ -22,16 +22,16 @@
  */
 class Material {
 public:
-    Color diffuse;			//< diffuse color
-    Color specular;			//< speular color
-    Color ambient;			//< ambient color
-    Color reflection;		//< reflection color
-    Color emission;			//< emmition color
-    float shininess;		//< shiniess value
-    float transparency;	    //< transparency value
-    float refraction;		//< refraction value
+    Color diffuse;          //< diffuse color
+    Color specular;         //< specular color
+    Color ambient;          //< ambient color
+    Color reflection;       //< reflection color
+    Color emission;         //< emission color
+    float shininess;        //< shininess value
+    float transparency;     //< transparency value
+    float refraction;       //< refraction value
 
-	/// Constuct default BRDF data
+    /// Construct default BRDF data
     Material ()
         : ambient(0.2f,0.2f,0.2f)
         , shininess(20.0f)

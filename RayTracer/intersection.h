@@ -15,20 +15,20 @@ class Primitive;
 
 /**
  * Intersection
- * 
+ *
  * Members:
  * CollisionPoint localGeo
  * Primitive* primitive
  */
 class Intersection {
 public:
-	/// Construct intersection
+    /// Construct intersection
     Intersection() : distance(DBL_MAX), primitive(NULL) {}
-	/// Pinter to primitive
+    /// Pinter to primitive
     Primitive* primitive;
-	/// Collision point
+    /// Collision point
     SurfacePoint surfacePoint;
-	/// Distance to intersection
+    /// Distance to intersection
     double distance;
 };
 

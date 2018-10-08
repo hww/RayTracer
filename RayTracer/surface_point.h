@@ -11,18 +11,18 @@
 
 #include "vector.h"
 /**
- * SurfacePoint 
+ * SurfacePoint
  *   Contains the collision information between ray and geometry or primitive
- * 
+ *
  * Members:
- *   Point pos
- *   Normal normal
- * 
+ *   Vector position
+ *   Vector normal
+ *
  * Notes:
- *   Store the local geometry at the intersection point. 
+ *   Store the local geometry at the intersection point.
  * ToDo:
- *   May need to store other quantities (eg. texture coordinate) in 
- *   a more complicated raytracer.
+ *   May need to store other quantities (aka texture coordinate) in
+ *   a more complicated ray-tracer.
  */
 class SurfacePoint {
 public:

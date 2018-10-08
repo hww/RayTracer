@@ -14,21 +14,21 @@
 class BasePrimitive
 {
 public:
-	/// Constructor
-	BasePrimitive()
-	{
-	}
-	/// Test intersection between ray and this primitive
-	/// @param ray 
-	/// @param cull back face culling
-	/// @result true for sucessfull intersection
-	virtual bool intersect(Ray& ray, bool cullBack) = 0;
-	/// Test intersection between ray and this primitive
-	/// @param ray 
-	/// @param[in,out] intersection will contain result of intersection
-	/// @param cull back face culling
-	/// @result true for sucessfull intersection
-	virtual bool intersect(Ray& ray, Intersection& intersection, bool cullBack) = 0;
+    /// Constructor
+    BasePrimitive()
+    {
+    }
+    /// Test intersection between ray and this primitive
+    /// @param ray
+    /// @param cull back face culling
+    /// @result true for successful intersection
+    virtual bool intersect(Ray& ray, bool cullBack) = 0;
+    /// Test intersection between ray and this primitive
+    /// @param ray
+    /// @param[in,out] intersection will contain result of intersection
+    /// @param cull back face culling
+    /// @result true for successful intersection
+    virtual bool intersect(Ray& ray, Intersection& intersection, bool cullBack) = 0;
 };
 
 #endif

@@ -7,8 +7,8 @@
 
 #include "types.h"
 
-/// Generate random value in given range between 
+/// Generate random value in given range between
 inline float randomInRange(float min, float max)
 {
-	return (min + 1) + (((float)rand()) / (float)RAND_MAX) * (max - (min + 1));
+    return (min + 1) + (((float)rand()) / (float)RAND_MAX) * (max - (min + 1));
 }

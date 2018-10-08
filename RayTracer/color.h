@@ -15,96 +15,96 @@
  */
 class Color {
 public:
-	/// Construct default, black color
+    /// Construct default, black color
     Color() {
         r = 0;
         g = 0;
         b = 0;
     }
-	/// Construct color with given componen's values
-	Color(float ri, float gi, float bi) {
+    /// Construct color with given components values
+    Color(float ri, float gi, float bi) {
         r = ri;
         g = gi;
         b = bi;
     }
-	/// Construct color from the vector value
+    /// Construct color from the vector value
     Color(const Vector& v) {
         r = v.x;
         g = v.y;
         b = v.z;
     }
-	
-	/* -- binary operations -- */
 
-	/// Set color 
-	/// @param ri component
-	/// @param gi component
-	/// @param bi component
-	void Set(float ri, float gi, float bi)
-	{
-		r = ri;
-		g = gi;
-		b = bi;
-	}
-	/// Magnitude the color 
-	/// @param c scalar value 
+    /* -- binary operations -- */
+
+    /// Set color
+    /// @param ri component
+    /// @param gi component
+    /// @param bi component
+    void Set(float ri, float gi, float bi)
+    {
+        r = ri;
+        g = gi;
+        b = bi;
+    }
+    /// Magnitude the color
+    /// @param c scalar value
     Color operator* (float c) const {
         return Color(r * c, g * c, b * c);
     }
-	/// Increase brigness of this color (aka ambient light)
-	/// @param c scalar value 
-	Color operator+ (float c) const {
+    /// Increase bigness of this color (aka ambient light)
+    /// @param c scalar value
+    Color operator+ (float c) const {
         return Color(r + c, g + c, b + c);
     }
-	/// Decrease brigness of this color (aka ambient light)
-	/// @param c scalar value 
-	Color operator- (float c) const {
+    /// Decrease brightness of this color (aka ambient light)
+    /// @param c scalar value
+    Color operator- (float c) const {
         return Color(r - c, g - c, b - c);
     }
-	/// Multiply two colors
-	Color operator* (const Color& c) const {
+    /// Multiply two colors
+    Color operator* (const Color& c) const {
         return Color(r * c.r, g * c.g, b * c.b);
     }
-	/// Summ of two colors
-	Color operator+ (const Color& c) const {
+    /// Sum of two colors
+    Color operator+ (const Color& c) const {
         return Color(r + c.r, g + c.g, b + c.b);
     }
-	/// Difference of two colors
-	Color operator- (const Color& c) const {
+    /// Difference of two colors
+    Color operator- (const Color& c) const {
         return Color(r - c.r, g - c.g, b - c.b);
     }
-	
-	/* -- unary mutable -- */
 
-	/// Multiply two colors
-	Color& operator*= (const Color& c) {
+    /* -- unary mutable -- */
+
+    /// Multiply two colors
+    Color& operator*= (const Color& c) {
         r *= c.r, g *= c.g, b *= c.b;
         return *this;
     }
-	/// Summ of two colors
-	Color& operator+= (const Color& c) {
+    /// Sum of two colors
+    Color& operator+= (const Color& c) {
         r += c.r, g += c.g, b += c.b;
         return *this;
     }
-	/// Difference of two colors
-	Color& operator-= (const Color& c) {
+    /// Difference of two colors
+    Color& operator-= (const Color& c) {
         r -= c.r, g -= c.g, b -= c.b;
         return *this;
     }
-	/// Multiply color by scalar value
+    /// Multiply color by scalar value
     Color& operator*= (float c) {
         r *= c, g *= c, b *= c;
         return *this;
     }
-	/// @result true if this color fully black
+    /// @result true if this color fully black
     bool isZero() {
         return r < 0.0001 && g < 0.0001 && b < 0.0001;
     }
 
-	/// The color component
-	///@{
-	float r, g, b;
-	///@}
+    /// The color component
+    ///@{
+    float r, g, b;
+    ///@}
 };
 
 

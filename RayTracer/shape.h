@@ -20,12 +20,12 @@
  *   Test if ray intersects with the shape or not (in object space), if so,
  *   return intersection point and normal
  *
- *   intersect(Ray& ray, Intersection& intersection, bool cullBack)
+ *   bool intersect(Ray& ray, Intersection& intersection, bool cullBack)
  *
  *   Same as intersect, but just return whether there is any intersection or
  *   not
  *
- *   intersect(Ray& ray, bool cullBack) 
+ *   bool intersect(Ray& ray, bool cullBack) 
  *
  * Notes:
  *   Triangle and Sphere are probably best implemented here

@@ -12,8 +12,8 @@
  * Sample is the point on virtual screen. Contains only x,y coordinates of this point
  */
 struct Sample {
-    float x; //< sample pisition
-    float y; //< sample pisition
+    float x; //< sample position
+    float y; //< sample position
 };
 
 #endif

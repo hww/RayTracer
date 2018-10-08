@@ -24,7 +24,7 @@
  *
  *   bool intersect(Ray& ray, Intersection& intersection, bool cullBack) 
  *
- *   bool intersect(Ray& ray, bool cullBack) 
+ *   bool intersect(Ray& ray, bool cullBack)
  *
  * Notes:
  *

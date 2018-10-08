@@ -28,23 +28,23 @@ public:
     /// Construct new sampler
     /// @param w The width of picture
     /// @param h The height of picture
-    /// @param aalias Mount of rays/samples per each pixel
-    Sampler(float w, float h, int antialysing) {
+    /// @param antialising quantity of rays/samples per each pixel
+    Sampler(float w, float h, int antialising) {
         width = w;
         height = h;
         pxWidth = 1.0f / width;
         pxHeight = 1.0f / height;
         centerX = 0.5f * pxWidth;
         centerY = 0.5f * pxHeight;
-        // Build antialysing tables
-        int aaPow2 = antialysing * antialysing;
-        for (int x = 0; x < antialysing; x++)
+        // Build anti-aliasing tables
+        int aaPow2 = antialising * antialising;
+        for (int x = 0; x < antialising; x++)
         {
-            for (int y = 0; y < antialysing; y++)
+            for (int y = 0; y < antialising; y++)
             {
-                int aaIndex = x + y * antialysing;
-                float xaa = 1.0f / (float)antialysing * (float)x;
-                float yaa = 1.0f / (float)antialysing * (float)y;
+                int aaIndex = x + y * antialising;
+                float xaa = 1.0f / (float)antialising * (float)x;
+                float yaa = 1.0f / (float)antialising * (float)y;
                 aaTableX[aaIndex] = pxWidth * xaa;
                 aaTableY[aaIndex] = pxHeight * yaa;
                 printf("AA: %d %.3f %.3f\n", aaIndex, xaa, yaa);
@@ -61,12 +61,12 @@ public:
     Vector getRandomSample(int index, float px, float py) {
         float x, y;
         if (index == 0) {
-            // first sample caclulate perfectly
+            // first sample calculate perfectly
             x = centerX + px * pxWidth;
             y = centerY + py * pxHeight;
         }
         else {
-            // all other calculate randomply inside one pixel
+            // all other calculate random inside one pixel
             x = ((rand() % 50) / 50.0f + px) * pxWidth;
             y = ((rand() % 50) / 50.0f + py) * pxHeight;
         }
@@ -82,7 +82,7 @@ public:
     /// @result random position inside pixel
     Vector getGridSample(int index, float px, float py) {
         float x, y;
-        // first sample caclulate perfectly
+        // first sample calculate perfectly
         x = centerX + px * pxWidth + aaTableX[index];
         y = centerY + py * pxHeight + aaTableY[index];
         return Vector(x * 2.0f - 1.0f, y * 2.0f - 1.0f, 0.0f);

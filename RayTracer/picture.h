@@ -35,10 +35,9 @@ using namespace std;
  */
 class Picture {
 public:
-    /// Construct the image with given size and antialising mode
+    /// Construct the image with given size
     /// @param w The width of picture
     /// @param h The height of picture
-    /// @param antialiasing value (aka how many ray-traces per single pixel)
     Picture(int w, int h)
     : defaultColor(0,0,0)
     , width(w)
@@ -57,7 +56,7 @@ public:
     }
     /// Write image to the file
     /// @param fileName the path to the target file
-    /// @param antialiasing quantity of rays per single pixel
+    /// @param antialias quantity of rays per single pixel
     void writeImage(const char* fileName, float antialias) {
         FreeImage_Initialise();
         FIBITMAP* bitmap = FreeImage_Allocate(width, height, 24);

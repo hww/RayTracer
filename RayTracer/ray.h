@@ -27,7 +27,7 @@ public:
     Ray() {
 
     }
-    /// Create new ray in possition with direction
+    /// Create new ray in position with direction
     Ray(const Vector& pos, const Vector& dir) : pos(pos), dir(dir) {}
     /// Convert ray to the string
     std::string toString() {

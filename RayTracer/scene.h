@@ -22,7 +22,7 @@
 
 /**
  * @breif
- * Scene can be defined by text based matalaguage. After completition defining scene
+ * Scene can be defined by text based metalanguage. After competition defining scene
  * the scene can be rendered.
  *
  * Methods:
@@ -42,11 +42,10 @@ public:
         output = "scene.png";
         width = 600;
         height = 400;
-        // maxdepth depth: The maximum depth (number of bounces) for a ray (default should be 5).
+        // the maximum depth (number of bounces) for a ray (default should be 5).
         maxdepth = 5;
         // amount of global illumination rays
         globIllumination = 0;
-        // antialise level
         antialias = 1;
         // camera
         fovy = 90.0;
@@ -564,15 +563,15 @@ public:
     float attenuationConst;
     float attenuationLinear;
     float attenuationQuadratic;
-    /// Defines a maximum number of vertices for later triangle specifications.
-    /// It must be set before vertices are defined. (Your program may not need this;
+    /// Defines a maximum number of vertexes for later triangle specifications.
+    /// It must be set before vertexes are defined. (Your program may not need this;
     /// it is simply a convenience to allocate arrays accordingly. You can ignore
     /// this command [but still parse it] if you don't need it).
     int maxverts;
-    /// Defines a maximum number of vertices with normals for later specifications.
-    /// It must be set before vertices with normals are defined. (same discussion as above)
+    /// Defines a maximum number of vertexes with normals for later specifications.
+    /// It must be set before vertexes with normals are defined. (same discussion as above)
     int maxvertnorms;
-    /// Array of vertices
+    /// Array of vertexes
     std::vector<Vector> vertices;
     /// Array of normals
     std::vector<Vector> normals;

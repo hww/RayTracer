@@ -14,10 +14,6 @@
 class BasePrimitive
 {
 public:
-    /// Constructor
-    BasePrimitive()
-    {
-    }
     /// Test intersection between ray and this primitive
     /// @param ray
     /// @param cull back face culling

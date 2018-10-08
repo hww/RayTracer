@@ -184,7 +184,6 @@ private:
         Color color = diffuse + specular;
         return color;
     }
-
 };
 
 #endif
